@@ -1,5 +1,6 @@
 import 'package:Recipes_app/src/styles/styles.dart';
 import 'package:Recipes_app/src/widgets/appBar.dart';
+import 'package:Recipes_app/src/widgets/carrousel.dart';
 import 'package:Recipes_app/src/widgets/drawerMenu.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const DrawerMenu(),
+        drawer: const DrawerMenu(),
         backgroundColor: colorBG,
         body:CustomScrollView(
           slivers: <Widget>[
@@ -16,9 +17,12 @@ class HomePage extends StatelessWidget {
             SliverList(
                 delegate: SliverChildListDelegate(
                     [
-                      Container(
+                      Column(
+                        children: <Widget>[
+                          carrousel()
+                        ],
                       )
-                ]
+                    ]
                 )
             )
           ],
