@@ -1,8 +1,11 @@
+import 'package:Recipes_app/src/widgets/titles.dart';
 import 'package:Recipes_app/src/styles/styles.dart';
 import 'package:Recipes_app/src/widgets/appBar.dart';
-import 'package:Recipes_app/src/widgets/carrousel.dart';
+import 'package:Recipes_app/src/widgets/swiperRecents.dart';
 import 'package:Recipes_app/src/widgets/drawerMenu.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/swiperCategories.dart';
 
 class HomePage extends StatelessWidget {
 
@@ -19,7 +22,10 @@ class HomePage extends StatelessWidget {
                     [
                       Column(
                         children: <Widget>[
-                          carrousel()
+                          swiperRecents(),
+                          titles('Categories'),
+                          swiperCategory(),
+                          titles('Popular Recipes'),
                         ],
                       )
                     ]
