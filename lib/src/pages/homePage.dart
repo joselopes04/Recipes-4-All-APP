@@ -1,3 +1,4 @@
+import 'package:Recipes_app/src/widgets/popularRecipes.dart';
 import 'package:Recipes_app/src/widgets/titles.dart';
 import 'package:Recipes_app/src/styles/styles.dart';
 import 'package:Recipes_app/src/widgets/appBar.dart';
@@ -26,6 +27,12 @@ class HomePage extends StatelessWidget {
                           titles('Categories'),
                           swiperCategory(),
                           titles('Popular Recipes'),
+                          popularRecipes(),
+                          popularRecipes(),
+                          popularRecipes(),
+                          popularRecipes(),
+                          popularRecipes(),
+                          popularRecipes()
                         ],
                       )
                     ]
