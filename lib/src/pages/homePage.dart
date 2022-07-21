@@ -1,4 +1,4 @@
-import 'package:Recipes_app/src/widgets/popularRecipes.dart';
+import 'package:Recipes_app/src/widgets/minimizedRecipe.dart';
 import 'package:Recipes_app/src/widgets/titles.dart';
 import 'package:Recipes_app/src/styles/styles.dart';
 import 'package:Recipes_app/src/widgets/appBar.dart';
@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: colorBG,
         body:CustomScrollView(
           slivers: <Widget>[
-            appBar(context),
+            appBar(context, 'Home'),
             SliverList(
                 delegate: SliverChildListDelegate(
                     [
@@ -27,12 +27,12 @@ class HomePage extends StatelessWidget {
                           titles('Categories'),
                           swiperCategory(),
                           titles('Popular Recipes'),
-                          popularRecipes(),
-                          popularRecipes(),
-                          popularRecipes(),
-                          popularRecipes(),
-                          popularRecipes(),
-                          popularRecipes()
+                          minimizedRecipe(context),
+                          minimizedRecipe(context),
+                          minimizedRecipe(context),
+                          minimizedRecipe(context),
+                          minimizedRecipe(context),
+                          minimizedRecipe(context)
                         ],
                       )
                     ]

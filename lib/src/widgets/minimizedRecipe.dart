@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../styles/styles.dart';
 
-Widget popularRecipes(){
+Widget minimizedRecipe(BuildContext context){
   return Column(
     children: <Widget> [
       SizedBox(
@@ -10,7 +9,7 @@ Widget popularRecipes(){
       ),
       GestureDetector(
         onTap: (){
-          print('Receita');
+          Navigator.pushNamed(context, 'recipe');
         },
         child: const Image(
           image: AssetImage('assets/images/food2.jpg'),
@@ -19,13 +18,13 @@ Widget popularRecipes(){
           height: 140.0,
         ),
       ),
-      textPopularRecipe()
+      textMinimizedRecipe(titleMinimizedRecipeStyle)
     ],
   );
 }
 
 
-Widget textPopularRecipe(){
+Widget textMinimizedRecipe(TextStyle style){
   return Column(
     children: <Widget>[
       SizedBox(
@@ -38,8 +37,7 @@ Widget textPopularRecipe(){
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              'Ovos Mexidos',
-              style: titleRecipeStyle,
+              'Ovos Mexidos', style: style,
             ),
             Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at ipsum nisl. Nulla facilisi. Cras fringilla mauris diam, id sollicitudin augue ultricies non. Nam lacinia.',
               textAlign: TextAlign.left,
@@ -67,7 +65,7 @@ Widget textPopularRecipe(){
                       flex: 1,
                       child: Row(
                           children: <Widget> [
-                            Icon(Icons.food_bank, color: colorIcons),
+                            Icon(Icons.food_bank_outlined, color: colorIcons),
                             Container(
                               child: Text('Easy',
                                 style: iconTextStyle ,

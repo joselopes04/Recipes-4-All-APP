@@ -17,11 +17,11 @@ class swiperCategory extends StatelessWidget {
           return PageView(
             controller: controller,
             children: <Widget> [
-              _cardCategory(),
-              _cardCategory(),
-              _cardCategory(),
-              _cardCategory(),
-              _cardCategory(),
+              _cardCategory(context),
+              _cardCategory(context),
+              _cardCategory(context),
+              _cardCategory(context),
+              _cardCategory(context),
             ],
           );
         },
@@ -30,10 +30,10 @@ class swiperCategory extends StatelessWidget {
       ),
     );
   }
-  Widget _cardCategory(){
+  Widget _cardCategory(BuildContext context){
     return GestureDetector(
       onTap: (){
-        print('object');
+        Navigator.pushNamed(context, 'category');
       },
       child: Container(
         child: Image(

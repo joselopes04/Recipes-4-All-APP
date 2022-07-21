@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false ,
       routes:<String,WidgetBuilder> {
         '/' : (BuildContext context) => HomePage(),
-        '/category' : (BuildContext context) => CategoryPage(),
-        '/recipe' : (BuildContext context) => RecipePage(),
+        'category' : (BuildContext context) => CategoryPage(),
+        'recipe' : (BuildContext context) => RecipePage(),
       },
     );
   }
