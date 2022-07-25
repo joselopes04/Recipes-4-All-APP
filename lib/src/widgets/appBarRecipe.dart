@@ -9,7 +9,7 @@ Widget appBarRecipe(){
     expandedHeight: 200.0,
     elevation: 0.0,
     iconTheme: IconThemeData(
-      color: colorIconsAppBar
+      color: colorWhite
     ),
     flexibleSpace: FlexibleSpaceBar(
       background: FadeInImage(
