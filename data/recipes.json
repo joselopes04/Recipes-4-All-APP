@@ -1,0 +1,160 @@
+{
+  "Popular recipes":[
+    {
+      "Title": "Bife",
+      "Image": "https://img.freepik.com/free-photo/raw-meat-with-ingredients-cooking_1220-5107.jpg?w=996&t=st=1659546689~exp=1659547289~hmac=cff57bb725f82216ebaa48db8cd186346ba10efdcdbfe404387184819bc39c99",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa.",
+      "Category": "Meat",
+      "Time": "45min",
+      "Difficulty": "Hard",
+      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
+      "Ingredients": [
+        {
+          "Ingredient": "1l Azeite",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
+        },
+        {
+          "Ingredient": "50g Alho",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
+        },
+        {
+          "Ingredient": "5g Pimenta",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
+        }
+      ]
+    },
+    {
+      "Title": "Peixe",
+      "Image": "https://img.freepik.com/free-photo/fried-fish-with-vegetables-plate-3_140725-754.jpg?w=900&t=st=1659546726~exp=1659547326~hmac=914702db6df23768120b11e9073872990151615ea2fb438d30fbeffff606c4f3",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa.",
+      "Category": "Fish",
+      "Time": "30min",
+      "Difficulty": "Medium",
+      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
+      "Ingredients": [
+        {
+          "Ingredient": "1l Azeite",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
+        },
+        {
+          "Ingredient": "50g Alho",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
+        },
+        {
+          "Ingredient": "5g Pimenta",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
+        }
+      ]
+    },
+    {
+      "Title": "Ovos mexidos",
+      "Image": "https://img.freepik.com/premium-photo/scrambled-eggs-scrumble-egg-fried-fresh-breakfast-dish_88242-11678.jpg?w=996",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa.",
+      "Category": "Breakfast",
+      "Time": "5 min",
+      "Difficulty": "Easy",
+      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
+      "Ingredients": [
+        {
+          "Ingredient": "1l Azeite",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
+        },
+        {
+          "Ingredient": "50g Alho",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
+        },
+        {
+          "Ingredient": "5g Pimenta",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
+        }
+      ]
+    },
+    {
+      "Title": "Yogurte grego com fruta",
+      "Image": "https://img.freepik.com/free-photo/appetizing-homemade-muesli-with-berries-yogurt-served-bowl-wooden-background_1220-6750.jpg?w=996&t=st=1659546845~exp=1659547445~hmac=a0410868789104268f9c60b0e50ba4ee5cf41066c74fbaf8c9d80245f5ce6101",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa.",
+      "Category": "Breakfast",
+      "Time": "5 min",
+      "Difficulty": "Easy",
+      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
+      "Ingredients": [
+        {
+          "Ingredient": "1l Azeite",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
+        },
+        {
+          "Ingredient": "50g Alho",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
+        },
+        {
+          "Ingredient": "5g Pimenta",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
+        }
+      ]
+    }
+  ],
+
+  "Categories":[
+    {
+      "name": "Breakfast",
+      "Image": "https://www.freepik.com/free-photo/vertical-shot-delicious-vegan-tofu-pancakes-with-colorful-fruits-syrup-coffee_12651317.htm#query=breakfast&position=21&from_view=search"
+    },
+    {
+      "name": "Meat",
+      "Image": "https://www.freepik.com/free-photo/raw-beef-steaks-with-spices-rosemary-flat-lay-top-view_6644701.htm#query=meat&position=7&from_view=search"
+    },
+    {
+      "name": "Fish",
+      "Image": "https://www.freepik.com/free-photo/raw-salmon-fillet-ingredients-cooking_6648084.htm?query=fish&collectionId=954&&position=24&from_view=collections"
+    }
+  ],
+
+  "Breakfast": [
+    {
+      "Title": "Ovos mexidos",
+      "Image": "https://www.freepik.com/free-photo/grilled-beef-steak-dark-wooden-surface_14454667.htm#query=meat&position=15&from_view=search",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa.",
+      "Category": "Breakfast",
+      "Time": "5 min",
+      "Difficulty": "Easy",
+      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
+      "Ingredients": [
+        {
+          "Ingredient": "1l Azeite",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
+        },
+        {
+          "Ingredient": "50g Alho",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
+        },
+        {
+          "Ingredient": "5g Pimenta",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
+        }
+      ]
+    },
+    {
+      "Title": "Yogurte grego com fruta",
+      "Image": "https://www.freepik.com/free-photo/healthy-breakfast-with-cereals-fruits_7764450.htm#query=yogurt%20breakfast&position=16&from_view=search",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa.",
+      "Category": "Breakfast",
+      "Time": "5 min",
+      "Difficulty": "Easy",
+      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
+      "Ingredients": [
+        {
+          "Ingredient": "1l Azeite",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
+        },
+        {
+          "Ingredient": "50g Alho",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
+        },
+        {
+          "Ingredient": "5g Pimenta",
+          "PhotoIngredient": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
+        }
+      ]
+    }
+  ]
+}

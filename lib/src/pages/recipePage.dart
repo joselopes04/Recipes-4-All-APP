@@ -1,4 +1,4 @@
-import 'package:Recipes_app/src/widgets/minimizedRecipe.dart';
+
 import 'package:Recipes_app/src/widgets/swiperIngredients.dart';
 import 'package:Recipes_app/src/widgets/titles.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +19,6 @@ class RecipePage extends StatelessWidget {
             SliverList(
                 delegate: SliverChildListDelegate(
                     [
-                      textMinimizedRecipe(titlesStyle),
                       titles('Ingredients'),
                       swiperIngredients(),
                       SizedBox(height: 15.0),

@@ -1,7 +1,8 @@
 import 'package:Recipes_app/src/widgets/appBar.dart';
-import 'package:Recipes_app/src/widgets/minimizedRecipe.dart';
 import 'package:flutter/material.dart';
+import '../provider/recipesProvider.dart';
 import '../styles/styles.dart';
+import '../viewModels/minimizedRecipes.dart';
 import '../widgets/drawerMenu.dart';
 
 class CategoryPage extends StatelessWidget {
@@ -17,12 +18,15 @@ class CategoryPage extends StatelessWidget {
           SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  minimizedRecipe(context),
-                  minimizedRecipe(context),
-                  minimizedRecipe(context),
-                  minimizedRecipe(context),
-                  minimizedRecipe(context),
-                  minimizedRecipe(context)
+                  FutureBuilder(
+                    future: recipesProvider.recivePopularRecipes(),
+                    initialData: [],
+                    builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot){
+                      return Column(
+                        children: minimizedRecipes(context, snapshot.data ),
+                      );
+                    },
+                  ),
                 ]
               )
           )
