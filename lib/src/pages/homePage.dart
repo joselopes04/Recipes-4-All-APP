@@ -32,9 +32,9 @@ class HomePage extends StatelessWidget {
                     [
                       Column(
                         children: <Widget>[
-                          swiperRecents(),
+                          SwiperRecents(),
                           titles('Categories'),
-                          swiperCategory(),
+                          SwiperCategory(),
                           titles('Popular Recipes'),
                           FutureBuilder(
                             future: recipesProvider.recivePopularRecipes(),
@@ -45,7 +45,6 @@ class HomePage extends StatelessWidget {
                               );
                             },
                           ),
-
                         ],
                       )
                     ]

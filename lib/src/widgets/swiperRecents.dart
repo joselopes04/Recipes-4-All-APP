@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
-class swiperRecents extends StatelessWidget {
+class SwiperRecents extends StatelessWidget {
   final controller = PageController(
     initialPage:0,
     viewportFraction: 1

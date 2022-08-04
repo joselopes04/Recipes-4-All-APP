@@ -97,15 +97,19 @@
   "Categories":[
     {
       "name": "Breakfast",
-      "Image": "https://www.freepik.com/free-photo/vertical-shot-delicious-vegan-tofu-pancakes-with-colorful-fruits-syrup-coffee_12651317.htm#query=breakfast&position=21&from_view=search"
+      "Image": "https://img.freepik.com/free-photo/fresh-croissant-with-fried-sausage-cheese_140725-1261.jpg?w=740&t=st=1659549996~exp=1659550596~hmac=f346add29f60bd760578c90fa8f808de4abeccc68b687c9807af3a011e578974"
     },
     {
       "name": "Meat",
-      "Image": "https://www.freepik.com/free-photo/raw-beef-steaks-with-spices-rosemary-flat-lay-top-view_6644701.htm#query=meat&position=7&from_view=search"
+      "Image": "https://img.freepik.com/premium-photo/raw-angus-beef-steaks-fillet-seasoned-top-view_89816-15289.jpg?w=360"
     },
     {
       "name": "Fish",
-      "Image": "https://www.freepik.com/free-photo/raw-salmon-fillet-ingredients-cooking_6648084.htm?query=fish&collectionId=954&&position=24&from_view=collections"
+      "Image": "https://img.freepik.com/free-photo/fresh-uncooked-seafood-fish-various-plates_23-2148637906.jpg?w=360&t=st=1659549938~exp=1659550538~hmac=77e5e6b06667d1ffa2e8076807a6252317e1480038f7c9f0e1e4c8f2d76ca37c"
+    },
+    {
+      "name": "Vegan",
+      "Image": "https://img.freepik.com/free-photo/sweet-potato-buddha-bowl-white-table-flat-lay_53876-96032.jpg?w=360&t=st=1659549881~exp=1659550481~hmac=40b49a9b898737cb8e7f6145ba44eab90e0fe3f3e732f0f8fdece3ebdc0cfc47"
     }
   ],
 
