@@ -1,29 +1,34 @@
+import 'package:flutter/material.dart';
 
+//Styles
+import '../styles/styles.dart';
+
+//Widgets
 import 'package:Recipes_app/src/widgets/swiperIngredients.dart';
 import 'package:Recipes_app/src/widgets/titles.dart';
-import 'package:flutter/material.dart';
-import '../styles/styles.dart';
 import '../widgets/appBarRecipe.dart';
 
 class RecipePage extends StatelessWidget {
 
-  final String description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.';
-
   @override
   Widget build(BuildContext context) {
+    final Map<String,dynamic> recipe = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
     return Scaffold(
         backgroundColor: colorBG,
         body:CustomScrollView(
           slivers: <Widget>[
-            appBarRecipe(),
+            appBarRecipe(recipe['Image']),
             SliverList(
                 delegate: SliverChildListDelegate(
                     [
+                      SizedBox(height: 15.0),
+                      _recipeDescription(recipe, titlesStyle),
+                      SizedBox(height: 15.0),
                       titles('Ingredients'),
-                      swiperIngredients(),
+                      swiperIngredients(recipe['Ingredients']),
                       SizedBox(height: 15.0),
                       titles('Preparation'),
-                      _recipeDescription(description)
+                      _recipeBody(recipe['Preparation'])
                     ],
                 )
             )
@@ -32,8 +37,75 @@ class RecipePage extends StatelessWidget {
     );
   }
 }
+Widget _recipeDescription(Map<String,dynamic> recipe, style ){
+  return Container(
+    alignment: AlignmentDirectional.topStart,
+    margin: EdgeInsets.only(left: 30.0, right: 15.0, bottom: 20.0),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          recipe['Title'], style: style,
+        ),
+        Text( recipe['Description'],
+          textAlign: TextAlign.left,
+          style: descriptonRecipeStyle,
+        ),
+        Container(
+          margin: EdgeInsets.only(top: 5.0),
+          child: Row(
+            children: <Widget> [
+              Expanded(
+                flex: 1,
+                child: Row(
+                    children: <Widget> [
+                      Icon(Icons.access_time, color: colorIcons),
+                      Container(
+                        child: Text( recipe['Time'],
+                          style: iconTextStyle ,
+                        ),
+                      )
+                    ]
+                ),
+              ),
 
-Widget _recipeDescription(String description){
+              Expanded(
+                flex: 1,
+                child: Row(
+                    children: <Widget> [
+                      Icon(Icons.food_bank_outlined, color: colorIcons),
+                      Container(
+                        child: Text(recipe['Difficulty'],
+                          style: iconTextStyle ,
+                        ),
+                      )
+                    ]
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Row(
+                    children: <Widget> [
+                      Icon(Icons.person_sharp, color: colorIcons),
+                      Container(
+                        child: Text(recipe['Servings'],
+                          style: iconTextStyle ,
+                        ),
+                      )
+                    ]
+                ),
+              ),
+
+            ],
+          ),
+        )
+
+      ],
+    ),
+  );
+}
+
+Widget _recipeBody(String description){
   return Container(
     margin: EdgeInsets.only(top: 5.0, left: 30.0, right: 20.0, bottom: 50.0),
     child: Text(description, style: descriptonRecipeStyle),

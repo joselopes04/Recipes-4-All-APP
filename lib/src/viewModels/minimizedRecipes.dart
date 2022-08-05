@@ -19,7 +19,7 @@ Widget _minimizedRecipe(BuildContext context, TextStyle style, Map<String,dynami
       ),
       GestureDetector(
         onTap: (){
-          Navigator.pushNamed(context, 'recipe');
+          Navigator.pushNamed(context, 'recipe', arguments: recipe);
         },
         child: Image(
           image: NetworkImage( recipe['Image']),
@@ -75,7 +75,19 @@ Widget _minimizedRecipe(BuildContext context, TextStyle style, Map<String,dynami
                         ]
                     ),
                   ),
-
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                        children: <Widget> [
+                          Icon(Icons.person_sharp, color: colorIcons),
+                          Container(
+                            child: Text(recipe['Servings'],
+                              style: iconTextStyle ,
+                            ),
+                          )
+                        ]
+                    ),
+                  ),
 
                 ],
               ),

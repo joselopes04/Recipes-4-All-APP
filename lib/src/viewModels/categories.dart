@@ -1,7 +1,7 @@
 import 'package:Recipes_app/src/provider/recipesProvider.dart';
 import 'package:flutter/material.dart';
 
-List<Widget> categories(BuildContext context, ){
+List<Widget> categories(BuildContext context){
   final List<Widget> categoriesList= [];
   final List<dynamic> categories = recipesProvider.categories;
 
@@ -16,7 +16,7 @@ List<Widget> categories(BuildContext context, ){
 Widget _cardCategory(BuildContext context, Map<String,dynamic> category){
   return GestureDetector(
     onTap: (){
-      Navigator.pushNamed(context, 'category');
+      Navigator.pushNamed(context, 'category', arguments: category);
     },
     child: Stack(
       children: [
