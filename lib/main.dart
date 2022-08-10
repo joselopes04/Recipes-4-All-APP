@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+//Pages
 import 'package:Recipes_app/src/pages/categoryPage.dart';
 import 'package:Recipes_app/src/pages/homePage.dart';
 import 'package:Recipes_app/src/pages/recipePage.dart';

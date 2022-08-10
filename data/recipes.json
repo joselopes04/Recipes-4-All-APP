@@ -1,123 +1,177 @@
 {
-  "Popular recipes":[
+  "All Recipes":[
     {
-      "Title": "Bife",
-      "Image": "https://img.freepik.com/free-photo/raw-meat-with-ingredients-cooking_1220-5107.jpg?w=996&t=st=1659546689~exp=1659547289~hmac=cff57bb725f82216ebaa48db8cd186346ba10efdcdbfe404387184819bc39c99",
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa.",
-      "Category": "Meat",
-      "Time": "45min",
-      "Difficulty": "Hard",
-      "Servings": "1 Serving",
-      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
-      "Ingredients": [
-        {
-          "Name": "1l Azeite",
-          "Photo": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
-        },
-        {
-          "Name": "50g Alho",
-          "Photo": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
-        },
-        {
-          "Name": "5g Pimenta",
-          "Photo": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
-        }
-      ]
-    },
-    {
-      "Title": "Peixe",
-      "Image": "https://img.freepik.com/free-photo/fried-fish-with-vegetables-plate-3_140725-754.jpg?w=900&t=st=1659546726~exp=1659547326~hmac=914702db6df23768120b11e9073872990151615ea2fb438d30fbeffff606c4f3",
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa.",
-      "Category": "Fish",
-      "Time": "30min",
-      "Difficulty": "Medium",
-      "Servings": "1 Serving",
-      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
-      "Ingredients": [
-        {
-          "Name": "1l Azeite",
-          "Photo": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
-        },
-        {
-          "Name": "50g Alho",
-          "Photo": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
-        },
-        {
-          "Name": "5g Pimenta",
-          "Photo": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
-        }
-      ]
-    },
-    {
-      "Title": "Ovos mexidos",
-      "Image": "https://img.freepik.com/premium-photo/scrambled-eggs-scrumble-egg-fried-fresh-breakfast-dish_88242-11678.jpg?w=996",
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa.",
+      "Title": "Scrumble eggs with ham",
+      "Image": "https://img.freepik.com/premium-photo/scrambled-eggs-scrumble-egg-fried-fresh-breakfast-dish_88242-11698.jpg?w=996",
+      "Description": "Making scrambled eggs isn’t complicated, is a quick and easy breakfast packed with protein.",
       "Category": "Breakfast",
       "Time": "5 min",
       "Difficulty": "Easy",
-      "Servings": "1 Serving",
-      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
+      "Servings": "1 Person",
+      "Preparation": "Heat a frying pan with olive oil. Wait a couple seconds, add the crack the eggs to the pan and stir with a spatula until the eggs start to cook. Do not let the eggs cook too much, the eggs should stay creamy and not too dry. Turn off the heat, pour the scrambled eggs to a plate or over a toasted bread slice and serve.",
       "Ingredients": [
         {
-          "Name": "1l Azeite",
-          "Photo": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
+          "Name": "2 tablespoon of olive oil",
+          "Photo": "https://img.freepik.com/free-photo/olive-oil-bottle-marble-table_114579-18137.jpg?w=996&t=st=1659724056~exp=1659724656~hmac=54245bd43e3867748b64ee1f239d7f195fc4873bad60cd1dc345363ab10cbfe5"
         },
         {
-          "Name": "50g Alho",
-          "Photo": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
+          "Name": "3 eggs",
+          "Photo": "https://img.freepik.com/free-photo/eggs-cups-burlap-with-dry-grass_1150-25517.jpg?w=360&t=st=1659724095~exp=1659724695~hmac=067e441c24ce344dc80d19a2e3fc9fa55f2457fb9cd9ff109e9a94a117c490a8"
         },
         {
-          "Name": "5g Pimenta",
-          "Photo": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
+          "Name": "5 slices of ham",
+          "Photo": "https://media-manager.noticiasaominuto.com/1920/1606305714/naom_5cb8296e29af9.jpg?crop_params=eyJsYW5kc2NhcGUiOnsiY3JvcFdpZHRoIjozNjY2LCJjcm9wSGVpZ2h0IjoyMDYyLCJjcm9wWCI6MCwiY3JvcFkiOjcxOH19"
         }
       ]
     },
     {
-      "Title": "Yogurte grego com fruta",
-      "Image": "https://img.freepik.com/free-photo/appetizing-homemade-muesli-with-berries-yogurt-served-bowl-wooden-background_1220-6750.jpg?w=996&t=st=1659546845~exp=1659547445~hmac=a0410868789104268f9c60b0e50ba4ee5cf41066c74fbaf8c9d80245f5ce6101",
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa.",
+      "Title": "Greek yogurt with oatmeal and fruits",
+      "Image": "https://images.unsplash.com/photo-1533007576165-faccd6a6a056?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "Description": "Greek yogurt breakfast bowls are packed with calcium, protein & vitamins. They’re the perfect healthy breakfast!",
       "Category": "Breakfast",
       "Time": "5 min",
       "Difficulty": "Easy",
-      "Servings": "1 Serving",
-      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
+      "Servings": "1 Person",
+      "Preparation": "In a bowl put the oatmeal then the greek yogurt and mix well with a spoon. Then place the berries on top. If you want, add other fruits.\nSuper easy and fast!",
       "Ingredients": [
         {
-          "Name": "1l Azeite",
-          "Photo": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
+          "Name": "4-6 tablespoon of greek yogurt",
+          "Photo": "https://img.freepik.com/free-photo/greek-yoghurt_144627-27070.jpg?w=900&t=st=1659805709~exp=1659806309~hmac=f230525ec8bb462e0e32a1a594fd5197b766efdbfcf472b408510f6fb457e14b"
         },
         {
-          "Name": "50g Alho",
-          "Photo": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
+          "Name": "3-5 tablespoon of oatmeal",
+          "Photo": "https://images.unsplash.com/photo-1586810504230-09dab6b8e01b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
         },
         {
-          "Name": "5g Pimenta",
-          "Photo": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
+          "Name": "1 handful of berries",
+          "Photo": "https://images.unsplash.com/photo-1613082410785-22292e8426e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"
         }
       ]
+    },
+    {
+    "Title": "Peperoni pizza",
+    "Image": "https://images.unsplash.com/photo-1528137973883-41b75386f217?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    "Description": "Want to prepare a simple and quite tasty homemade pizza? \nMake this delicious pizza with peperoni and grated cheese. With few ingredients, you can make a quick pizza without leaving home.",
+    "Category": "Pastas",
+    "Time": "1 hour",
+    "Difficulty": "Easy",
+    "Servings": "2 People",
+    "Preparation": "Missing..., José is lazy ;)",
+    "Ingredients": [
+      {
+        "Name": "Flour 150g",
+        "Photo": "https://img.freepik.com/free-photo/flour-wheat-flat-lay-wooden_176474-7337.jpg?w=360&t=st=1659804377~exp=1659804977~hmac=fa0e6c336007f5118a0f88d9acf2d3f38bef01dc43337ce963e2659a1e3741cc"
+      },
+      {
+        "Name": "3 tomatoes",
+        "Photo": "https://img.freepik.com/free-photo/tomatoes-mini-bucket-side-view-grey-wooden-dark-wall_176474-5855.jpg?w=360&t=st=1659804444~exp=1659805044~hmac=7ac53bec810d279383cec10ae061097bbc2102155de31937c72f1c2eef4f689e"
+      },
+      {
+        "Name": "Grated cheese",
+        "Photo": "https://img.freepik.com/free-photo/bottom-view-cheese-slices-wooden-bowl-box-grater-cutting-board-wooden-surface_140725-103041.jpg?w=360&t=st=1659807618~exp=1659808218~hmac=0d11e65b1c0c33bb96575978574fbaccaed78ba7c523f84fc62f1ca7c1c156a3"
+      },
+      {
+        "Name": "Peperoni 250g ",
+        "Photo": "https://cdn.shopify.com/s/files/1/1091/0010/products/PB110341_x720.jpg?v=1636733701"
+      },
+      {
+        "Name": "1/2 onion",
+        "Photo": "https://img.freepik.com/free-photo/onions-blanket_144627-11979.jpg?w=996&t=st=1659808046~exp=1659808646~hmac=92de7cf941b59c6a76d2ff0f47d6a36d0c15f3f9fa75163da0a996f563728d2e"
+      },
+      {
+        "Name": "2 garlics",
+        "Photo": "https://img.freepik.com/free-photo/fresh-raw-garlic-ready-cook_1150-42636.jpg?w=996&t=st=1659808220~exp=1659808820~hmac=309db9d6aebec70e67c236c2ff611e9995ae11d0efd868799c46ad50fbf5617a"
+      },
+      {
+        "Name": "Yeast 4g",
+        "Photo": "https://images.unsplash.com/photo-1642497393543-0e552dfb5c31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      },
+      {
+        "Name": "4 tablespoon of olive oil",
+        "Photo": "https://img.freepik.com/free-photo/olive-oil-bottle-marble-table_114579-18137.jpg?w=996&t=st=1659724056~exp=1659724656~hmac=54245bd43e3867748b64ee1f239d7f195fc4873bad60cd1dc345363ab10cbfe5"
+      },
+      {
+        "Name": "Basil(or dried) qb.",
+        "Photo": "https://images.unsplash.com/photo-1601091622032-12cca31af607?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      },
+      {
+        "Name": "Salt qb.",
+        "Photo": "https://img.freepik.com/free-photo/sea-salt-coming-out-salt-shaker_176474-1689.jpg?w=996&t=st=1659808866~exp=1659809466~hmac=c37775fce103fd368a615d49e560c66fda147b5dc0e54abd243d0e9ca2109407"
+      },
+      {
+        "Name": "Sugar qb.",
+        "Photo": "https://img.freepik.com/free-photo/world-diabetes-day-sugar-cubes-glass-bowl-dark-floor_1150-26665.jpg?w=996&t=st=1659809357~exp=1659809957~hmac=cdf05b2e0ce681a1f654373160a3063714eb24f064e4dff6bad0080e6982014e"
+      }
+    ]
+    }
+  ],
+  "All Ingredients": [
+    {
+      "Name": "Olive oil",
+      "Photo": "https://img.freepik.com/free-photo/olive-oil-bottle-marble-table_114579-18137.jpg?w=996&t=st=1659724056~exp=1659724656~hmac=54245bd43e3867748b64ee1f239d7f195fc4873bad60cd1dc345363ab10cbfe5"
+    },
+    {
+      "Name": "Eggs",
+      "Photo": "https://img.freepik.com/free-photo/eggs-cups-burlap-with-dry-grass_1150-25517.jpg?w=360&t=st=1659724095~exp=1659724695~hmac=067e441c24ce344dc80d19a2e3fc9fa55f2457fb9cd9ff109e9a94a117c490a8"
+    },
+    {
+      "Name": "Ham",
+      "Photo": "https://media-manager.noticiasaominuto.com/1920/1606305714/naom_5cb8296e29af9.jpg?crop_params=eyJsYW5kc2NhcGUiOnsiY3JvcFdpZHRoIjozNjY2LCJjcm9wSGVpZ2h0IjoyMDYyLCJjcm9wWCI6MCwiY3JvcFkiOjcxOH19"
+    },
+    {
+      "Name": "Greek yogurt",
+      "Photo": "https://img.freepik.com/free-photo/greek-yoghurt_144627-27070.jpg?w=900&t=st=1659805709~exp=1659806309~hmac=f230525ec8bb462e0e32a1a594fd5197b766efdbfcf472b408510f6fb457e14b"
+    },
+    {
+      "Name": "Oatmeal",
+      "Photo": "https://images.unsplash.com/photo-1586810504230-09dab6b8e01b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+    },
+    {
+      "Name": "Berries",
+      "Photo": "https://images.unsplash.com/photo-1613082410785-22292e8426e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"
     }
   ],
 
   "Categories":[
     {
-      "name": "Breakfast",
-      "Image": "https://img.freepik.com/free-photo/fresh-croissant-with-fried-sausage-cheese_140725-1261.jpg?w=740&t=st=1659549996~exp=1659550596~hmac=f346add29f60bd760578c90fa8f808de4abeccc68b687c9807af3a011e578974"
-    },
-    {
       "name": "Meat",
-      "Image": "https://img.freepik.com/premium-photo/raw-angus-beef-steaks-fillet-seasoned-top-view_89816-15289.jpg?w=360"
+      "Image": "https://img.freepik.com/free-photo/raw-meat-slices-topped-with-herbs-salt_140725-1838.jpg?w=740&t=st=1659804508~exp=1659805108~hmac=d46754e24d61fa23b3d42c8e15a5acc3403ca6c06eebb3710efbe8cf31439ffa"
     },
     {
-      "name": "Fish",
+      "name": "Fish and seafood",
       "Image": "https://img.freepik.com/free-photo/fresh-uncooked-seafood-fish-various-plates_23-2148637906.jpg?w=360&t=st=1659549938~exp=1659550538~hmac=77e5e6b06667d1ffa2e8076807a6252317e1480038f7c9f0e1e4c8f2d76ca37c"
+    },
+    {
+      "name": "Pastas",
+      "Image": "https://img.freepik.com/free-photo/two-kind-pizza-table_140725-5573.jpg?w=740&t=st=1659802664~exp=1659803264~hmac=a5bea3cb530f3d3eae6a7f925f69e825f031ab4008d9fd1f260169c85ab9578b"
     },
     {
       "name": "Vegan",
       "Image": "https://img.freepik.com/free-photo/sweet-potato-buddha-bowl-white-table-flat-lay_53876-96032.jpg?w=360&t=st=1659549881~exp=1659550481~hmac=40b49a9b898737cb8e7f6145ba44eab90e0fe3f3e732f0f8fdece3ebdc0cfc47"
     },
     {
-      "name": "Sweets",
+      "name": "Sweets and desserts",
+      "Image": "https://img.freepik.com/free-photo/belgium-waffles-with-strawberries-ice-cream-white-plate_2829-16340.jpg?w=360&t=st=1659803023~exp=1659803623~hmac=e0749fcc29e6b4746ae634e143bbef651108af83d0150a2699cc52faa9094f65"
+    },
+    {
+      "name": "Cakes and pies",
       "Image": "https://img.freepik.com/free-photo/assortment-pieces-cake_114579-30731.jpg?w=996&t=st=1659613610~exp=1659614210~hmac=880bbe9d33d24cdbdbf782d354d75cd9558386fee1d1e947cf2d14e72cc852a6"
+    },
+    {
+      "name": "Breakfast",
+      "Image": "https://img.freepik.com/free-photo/fresh-croissant-with-fried-sausage-cheese_140725-1261.jpg?w=740&t=st=1659549996~exp=1659550596~hmac=f346add29f60bd760578c90fa8f808de4abeccc68b687c9807af3a011e578974"
+    },
+    {
+      "name": "Side dishes",
+      "Image": "https://img.freepik.com/free-photo/side-view-rice-garnish-with-fried-onion-carrot-greens-chili-pepper-table_141793-5069.jpg?w=996&t=st=1659803565~exp=1659804165~hmac=d86dffc6ab6efc97891563407f2ad1914fc85027c40a0bcbb0482990190920a2"
+    },
+    {
+      "name": "Drinks",
+      "Image": "https://img.freepik.com/free-photo/cocktail-glasses_144627-34960.jpg?w=360&t=st=1659802826~exp=1659803426~hmac=6b7e914ef96191379aaedefbb199dd14272d8cfdd77dea9c9a6d8c65d9cdfe33"
+    },
+    {
+      "name": "Appetizer and snacks",
+      "Image": "https://img.freepik.com/free-photo/italian-sandwiches-bruschetta-with-cheese-dry-tomatoes-basil_114579-14260.jpg?w=360&t=st=1659803356~exp=1659803956~hmac=b12b21685a16c689dbf7d5e520ddb183fb1dddbe831a803a11f52cf6fbbda496"
     },
     {
       "name": "Soups",
@@ -132,20 +186,19 @@
       "Image": "https://img.freepik.com/free-photo/delicious-christmas-food-composition_23-2148719828.jpg?w=996&t=st=1659613425~exp=1659614025~hmac=84489c4beb86e972eace5578c2aa6be1bf9c319909dcf664c4733168b6cb113b"
     }
   ],
-
   "Breakfast": [
     {
-      "Title": "Scrumble Eggs with ham",
+      "Title": "Scrumble eggs with ham",
       "Image": "https://img.freepik.com/premium-photo/scrambled-eggs-scrumble-egg-fried-fresh-breakfast-dish_88242-11698.jpg?w=996",
       "Description": "Making scrambled eggs isn’t complicated, is a quick and easy breakfast packed with protein.",
       "Category": "Breakfast",
       "Time": "5 min",
       "Difficulty": "Easy",
-      "Servings": "1 Serving",
+      "Servings": "1 Person",
       "Preparation": "Heat a frying pan with olive oil. Wait a couple seconds, add the crack the eggs to the pan and stir with a spatula until the eggs start to cook. Do not let the eggs cook too much, the eggs should stay creamy and not too dry. Turn off the heat, pour the scrambled eggs to a plate or over a toasted bread slice and serve.",
       "Ingredients": [
         {
-          "Name": "2 soup spoon of olive oil",
+          "Name": "2 tablespoon of olive oil",
           "Photo": "https://img.freepik.com/free-photo/olive-oil-bottle-marble-table_114579-18137.jpg?w=996&t=st=1659724056~exp=1659724656~hmac=54245bd43e3867748b64ee1f239d7f195fc4873bad60cd1dc345363ab10cbfe5"
         },
         {
@@ -159,79 +212,86 @@
       ]
     },
     {
-      "Title": "Yogurte grego com fruta",
-      "Image": "https://img.freepik.com/free-photo/appetizing-homemade-muesli-with-berries-yogurt-served-bowl-wooden-background_1220-6750.jpg?w=996&t=st=1659712488~exp=1659713088~hmac=148876c64bb46076c351ae5e3f59f4b408292893c267a5d3a9d6c6edb107e054",
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa.",
+      "Title": "Greek yogurt with oatmeal and fruits",
+      "Image": "https://images.unsplash.com/photo-1533007576165-faccd6a6a056?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "Description": "Greek yogurt breakfast bowls are packed with calcium, protein & vitamins. They’re the perfect healthy breakfast!",
       "Category": "Breakfast",
       "Time": "5 min",
       "Difficulty": "Easy",
-      "Servings": "1 Serving",
-      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
+      "Servings": "1 Person",
+      "Preparation": "In a bowl put the oatmeal then the greek yogurt and mix well with a spoon. Then place the berries on top. If you want, add other fruits.\nSuper easy and fast!",
       "Ingredients": [
         {
-          "Name": "1l Azeite",
-          "Photo": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
+          "Name": "4-6 tablespoon of greek yogurt",
+          "Photo": "https://img.freepik.com/free-photo/greek-yoghurt_144627-27070.jpg?w=900&t=st=1659805709~exp=1659806309~hmac=f230525ec8bb462e0e32a1a594fd5197b766efdbfcf472b408510f6fb457e14b"
         },
         {
-          "Name": "50g Alho",
-          "Photo": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
+          "Name": "3-5 tablespoon of oatmeal",
+          "Photo": "https://images.unsplash.com/photo-1586810504230-09dab6b8e01b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
         },
         {
-          "Name": "5g Pimenta",
-          "Photo": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
+          "Name": "1 handful of berries",
+          "Photo": "https://images.unsplash.com/photo-1613082410785-22292e8426e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"
         }
       ]
     }
   ],
-
-  "Meat": [
+  "Pastas": [
     {
-      "Title": "Carne",
-      "Image": "https://img.freepik.com/premium-photo/scrambled-eggs-scrumble-egg-fried-fresh-breakfast-dish_88242-11698.jpg?w=996",
-      "Description": "Heat a frying pan with olive oil. Wait a couple seconds, add the crack the eggs to the pan and stir with a spatula until the eggs start to cook. Do not let the eggs cook too much, the eggs should stay creamy and not too dry. Turn off the heat, pour the scrambled eggs to a plate or over a toasted bread slice and serve.",
-      "Category": "Breakfast",
-      "Time": "5 min",
+      "Title": "Peperoni pizza",
+      "Image": "https://images.unsplash.com/photo-1528137973883-41b75386f217?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      "Description": "Want to prepare a simple and quite tasty homemade pizza? \nMake this delicious pizza with peperoni and grated cheese. With few ingredients, you can make a quick pizza without leaving home.",
+      "Category": "Pastas",
+      "Time": "1 hour",
       "Difficulty": "Easy",
-      "Servings": "2 Servings",
-      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
+      "Servings": "2 People",
+      "Preparation": "Missing..., José is lazy ;)",
       "Ingredients": [
         {
-          "Name": "1l Azeite",
-          "Photo": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
+          "Name": "Flour 150g",
+          "Photo": "https://img.freepik.com/free-photo/flour-wheat-flat-lay-wooden_176474-7337.jpg?w=360&t=st=1659804377~exp=1659804977~hmac=fa0e6c336007f5118a0f88d9acf2d3f38bef01dc43337ce963e2659a1e3741cc"
         },
         {
-          "Name": "50g Alho",
-          "Photo": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
+          "Name": "3 tomatoes",
+          "Photo": "https://img.freepik.com/free-photo/tomatoes-mini-bucket-side-view-grey-wooden-dark-wall_176474-5855.jpg?w=360&t=st=1659804444~exp=1659805044~hmac=7ac53bec810d279383cec10ae061097bbc2102155de31937c72f1c2eef4f689e"
         },
         {
-          "Name": "5g Pimenta",
-          "Photo": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
-        }
-      ]
-    },
-    {
-      "Title": "Yogurte grego com fruta",
-      "Image": "https://img.freepik.com/free-photo/appetizing-homemade-muesli-with-berries-yogurt-served-bowl-wooden-background_1220-6750.jpg?w=996&t=st=1659712488~exp=1659713088~hmac=148876c64bb46076c351ae5e3f59f4b408292893c267a5d3a9d6c6edb107e054",
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa.",
-      "Category": "Breakfast",
-      "Time": "5 min",
-      "Difficulty": "Easy",
-      "Servings": "1 Serving",
-      "Preparation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu malesuada elit, eget ullamcorper massa. Nulla elementum eros neque, a sollicitudin urna rhoncus a. Suspendisse ut enim at urna dictum tristique vitae in elit. Maecenas venenatis placerat volutpat. Ut in lacus sodales, consequat tortor sed, posuere arcu. In vitae ante vitae lectus pulvinar rhoncus. Aenean convallis fringilla pretium. Donec sed eros arcu. Donec eget nisl orci. Maecenas a maximus tellus, a ullamcorper velit.",
-      "Ingredients": [
-        {
-          "Name": "1l Azeite",
-          "Photo": "https://www.freepik.com/free-photo/olive-oil-bottle-marble-table_10787590.htm#query=olive%20oil&position=39&from_view=search"
+          "Name": "Grated cheese",
+          "Photo": "https://img.freepik.com/free-photo/bottom-view-cheese-slices-wooden-bowl-box-grater-cutting-board-wooden-surface_140725-103041.jpg?w=360&t=st=1659807618~exp=1659808218~hmac=0d11e65b1c0c33bb96575978574fbaccaed78ba7c523f84fc62f1ca7c1c156a3"
         },
         {
-          "Name": "50g Alho",
-          "Photo": "https://www.freepik.com/free-photo/fresh-raw-garlic-ready-cook_13901146.htm#query=garlic&position=2&from_view=search"
+          "Name": "Peperoni 250g ",
+          "Photo": "https://cdn.shopify.com/s/files/1/1091/0010/products/PB110341_x720.jpg?v=1636733701"
         },
         {
-          "Name": "5g Pimenta",
-          "Photo": "https://www.freepik.com/free-photo/spoon-heap-spices-table_6480480.htm?query=pepper%20corns"
+          "Name": "1/2 onion",
+          "Photo": "https://img.freepik.com/free-photo/onions-blanket_144627-11979.jpg?w=996&t=st=1659808046~exp=1659808646~hmac=92de7cf941b59c6a76d2ff0f47d6a36d0c15f3f9fa75163da0a996f563728d2e"
+        },
+        {
+          "Name": "2 garlics",
+          "Photo": "https://img.freepik.com/free-photo/fresh-raw-garlic-ready-cook_1150-42636.jpg?w=996&t=st=1659808220~exp=1659808820~hmac=309db9d6aebec70e67c236c2ff611e9995ae11d0efd868799c46ad50fbf5617a"
+        },
+        {
+          "Name": "Yeast 4g",
+          "Photo": "https://images.unsplash.com/photo-1642497393543-0e552dfb5c31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        },
+        {
+          "Name": "4 tablespoon of olive oil",
+          "Photo": "https://img.freepik.com/free-photo/olive-oil-bottle-marble-table_114579-18137.jpg?w=996&t=st=1659724056~exp=1659724656~hmac=54245bd43e3867748b64ee1f239d7f195fc4873bad60cd1dc345363ab10cbfe5"
+        },
+        {
+          "Name": "Basil(or dried) qb.",
+          "Photo": "https://images.unsplash.com/photo-1601091622032-12cca31af607?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        },
+        {
+          "Name": "Salt qb.",
+          "Photo": "https://img.freepik.com/free-photo/sea-salt-coming-out-salt-shaker_176474-1689.jpg?w=996&t=st=1659808866~exp=1659809466~hmac=c37775fce103fd368a615d49e560c66fda147b5dc0e54abd243d0e9ca2109407"
+        },
+        {
+          "Name": "Sugar qb.",
+          "Photo": "https://img.freepik.com/free-photo/world-diabetes-day-sugar-cubes-glass-bowl-dark-floor_1150-26665.jpg?w=996&t=st=1659809357~exp=1659809957~hmac=cdf05b2e0ce681a1f654373160a3063714eb24f064e4dff6bad0080e6982014e"
         }
       ]
     }
   ]
-}
+  }

@@ -11,7 +11,7 @@ class _recipesProvider{
   Future<List<dynamic>> recivePopularRecipes() async{
     final response = await rootBundle.loadString('data/recipes.json');
     Map<String,dynamic> recipesMap = json.decode(response);
-    popularRecipes = recipesMap['Popular recipes'];
+    popularRecipes = recipesMap['All Recipes'];
     return popularRecipes;
   }
 
