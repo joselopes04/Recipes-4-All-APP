@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
+//External libraries
+import 'package:flutter_swiper/flutter_swiper.dart';
+
 //View Model
 import 'package:Recipes_app/src/viewModels/categories.dart';
 
 //Provider
 import '../provider/recipesProvider.dart';
-
-//Widgets
-import 'package:flutter_swiper/flutter_swiper.dart';
-
 
 class
 SwiperCategory extends StatelessWidget {

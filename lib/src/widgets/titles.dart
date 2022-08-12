@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+//Styles
 import '../styles/styles.dart';
 
 Widget titles(String title) {

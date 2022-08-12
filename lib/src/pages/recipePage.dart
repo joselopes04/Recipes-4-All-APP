@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+//External libraries
+import 'package:url_launcher/url_launcher_string.dart';
+
 //Styles
 import '../styles/styles.dart';
 
@@ -9,7 +12,6 @@ import 'package:Recipes_app/src/widgets/titles.dart';
 import '../widgets/appBarRecipe.dart';
 
 class RecipePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     final Map<String,dynamic> recipe = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
@@ -28,7 +30,7 @@ class RecipePage extends StatelessWidget {
                       swiperIngredients(recipe['Ingredients']),
                       SizedBox(height: 15.0),
                       titles('Preparation'),
-                      _recipeBody(recipe['Preparation'])
+                      _recipeBody(recipe['Preparation'], recipe['Source']),
                     ],
                 )
             )
@@ -104,10 +106,24 @@ Widget _recipeDescription(Map<String,dynamic> recipe, style ){
     ),
   );
 }
+Widget _recipeBody(String description, url){
 
-Widget _recipeBody(String description){
   return Container(
     margin: EdgeInsets.only(top: 5.0, left: 30.0, right: 20.0, bottom: 50.0),
-    child: Text(description, style: descriptonRecipeStyle),
+    child: Column(
+      children: [
+        Text(description, style: descriptonRecipeStyle),
+        ElevatedButton(
+            onPressed: () async {
+              if (await launchUrlString(url)) {
+                await canLaunchUrlString(url);
+              } else {
+                throw 'Could not launch $url';
+              }
+              }
+              ,child: Text('See original recipe')
+        )
+      ],
+    )
   );
 }

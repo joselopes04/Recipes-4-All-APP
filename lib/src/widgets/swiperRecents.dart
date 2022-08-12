@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+//External libraries
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 class SwiperRecents extends StatelessWidget {
