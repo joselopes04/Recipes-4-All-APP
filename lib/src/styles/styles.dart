@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 //Colors
 final colorBG = Color.fromRGBO(200, 200, 222, 1.0);
 final colorTitle = Color.fromRGBO(0, 0, 0, 1.0);
-final colorRecipeDescription = Color.fromRGBO(128, 128, 128, 0.8);
 final colorIcons = Color.fromRGBO(255, 104, 0, 1.0);
+final colorGrey = Color.fromRGBO(128, 128, 128, 0.8);
 final colorWhite = Color.fromRGBO(255, 255, 255, 1.0);
 
 //Texts
@@ -22,7 +22,7 @@ final titleMinimizedRecipeStyle = TextStyle(
 
 final descriptonRecipeStyle = TextStyle(
     fontWeight: FontWeight.w400,
-    color: colorRecipeDescription,
+    color: colorGrey,
     fontSize: 14.0
 );
 

@@ -1,28 +1,30 @@
 import 'package:Recipes_app/src/styles/styles.dart';
 import 'package:flutter/material.dart';
 
-List<Widget> minimizedRecipes(BuildContext context, List<dynamic>? recipes){
+List<Widget> minimizedRecipes(BuildContext context, List<dynamic>? recipes) {
   final List<Widget> recipesList = [];
 
   recipes?.forEach((recipe) {
-    final recipesListWidgetProvider = _minimizedRecipe(context, titlesStyle, recipe);
+    final recipesListWidgetProvider =
+        _minimizedRecipe(context, titlesStyle, recipe);
     recipesList.add(recipesListWidgetProvider);
   });
   return recipesList;
 }
 
-Widget _minimizedRecipe(BuildContext context, TextStyle style, Map<String,dynamic> recipe){
+Widget _minimizedRecipe(
+    BuildContext context, TextStyle style, Map<String, dynamic> recipe) {
   return Column(
     children: <Widget>[
       SizedBox(
         height: 15.0,
       ),
       GestureDetector(
-        onTap: (){
+        onTap: () {
           Navigator.pushNamed(context, 'recipe', arguments: recipe);
         },
         child: Image(
-          image: NetworkImage( recipe['Image']),
+          image: NetworkImage(recipe['Image']),
           fit: BoxFit.fill,
           width: 300.0,
           height: 140.0,
@@ -38,61 +40,57 @@ Widget _minimizedRecipe(BuildContext context, TextStyle style, Map<String,dynami
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              recipe['Title'], style: style,
+              recipe['Title'],
+              style: style,
             ),
-            Text( recipe['Description'],
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5.0),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: Row(children: <Widget>[
+                      Icon(Icons.access_time, color: colorIcons),
+                      Container(
+                        child: Text(
+                          recipe['Time'],
+                          style: iconTextStyle,
+                        ),
+                      )
+                    ]),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Row(children: <Widget>[
+                      Icon(Icons.food_bank_outlined, color: colorIcons),
+                      Container(
+                        child: Text(
+                          recipe['Difficulty'],
+                          style: iconTextStyle,
+                        ),
+                      )
+                    ]),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Row(children: <Widget>[
+                      Icon(Icons.person_sharp, color: colorIcons),
+                      Container(
+                        child: Text(
+                          recipe['Servings'],
+                          style: iconTextStyle,
+                        ),
+                      )
+                    ]),
+                  ),
+                ],
+              ),
+            ),
+            Text(
+              recipe['Description'],
               textAlign: TextAlign.left,
               style: descriptonRecipeStyle,
             ),
-            Container(
-              margin: EdgeInsets.only(top: 5.0),
-              child: Row(
-                children: <Widget> [
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                        children: <Widget> [
-                          Icon(Icons.access_time, color: colorIcons),
-                          Container(
-                            child: Text( recipe['Time'],
-                              style: iconTextStyle ,
-                            ),
-                          )
-                        ]
-                    ),
-                  ),
-
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                        children: <Widget> [
-                          Icon(Icons.food_bank_outlined, color: colorIcons),
-                          Container(
-                            child: Text(recipe['Difficulty'],
-                              style: iconTextStyle ,
-                            ),
-                          )
-                        ]
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                        children: <Widget> [
-                          Icon(Icons.person_sharp, color: colorIcons),
-                          Container(
-                            child: Text(recipe['Servings'],
-                              style: iconTextStyle ,
-                            ),
-                          )
-                        ]
-                    ),
-                  ),
-
-                ],
-              ),
-            )
-
           ],
         ),
       )

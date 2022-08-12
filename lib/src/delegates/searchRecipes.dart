@@ -9,18 +9,15 @@ import 'package:Recipes_app/src/viewModels/searchedRecipes.dart';
 //Styles
 import 'package:Recipes_app/src/styles/styles.dart';
 
-
-class searchRecipesDelegate extends SearchDelegate{
-
+class searchRecipesDelegate extends SearchDelegate {
   @override
   List<Widget> buildActions(BuildContext context) {
     return [
       IconButton(
-        onPressed: () {
-          this.query = '';
-        },
-        icon: Icon(Icons.clear)
-    )
+          onPressed: () {
+            this.query = '';
+          },
+          icon: Icon(Icons.clear))
     ];
   }
 
@@ -29,14 +26,13 @@ class searchRecipesDelegate extends SearchDelegate{
     return IconButton(
         onPressed: () {
           this.close(context, null);
-          },
-        icon: Icon(Icons.arrow_back_ios)
-    );
+        },
+        icon: Icon(Icons.arrow_back_ios));
   }
 
   @override
   Widget buildResults(BuildContext context) {
-     return FutureBuilder(
+    return FutureBuilder(
       future: recipesProvider.recivePopularRecipes(),
       initialData: [],
       builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot) {
@@ -45,14 +41,11 @@ class searchRecipesDelegate extends SearchDelegate{
         return CustomScrollView(
           slivers: [
             SliverList(
-                delegate: SliverChildListDelegate(
-                  [
-                    Column(
-                        children: searchedRecipes(context, recipes,searchInput),
-                    )
-                  ]
-                )
-            )
+                delegate: SliverChildListDelegate([
+              Column(
+                children: searchedRecipes(context, recipes, searchInput),
+              )
+            ]))
           ],
         );
       },
