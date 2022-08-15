@@ -21,12 +21,19 @@ class DrawerMenu extends StatelessWidget {
                 )
               ),
               child: Container(
-                child: Text('RECIPES FOR ALL', style: titlesDrawerHeader),
+                child: Text('RECIPES 4 ALL', style: titlesDrawerHeader),
               ),
             ),
             ListTile(
-              leading: Icon(Icons.favorite, color: colorIcons),
+              leading: Icon(Icons.bookmark, color: colorIcons),
               title: Text('Favorites'),
+              onTap: (){
+                Navigator.pushNamed(context, 'category');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.shopping_basket, color: colorIcons),
+              title: Text('Shoping list'),
               onTap: (){
                 Navigator.pushNamed(context, 'category');
               },

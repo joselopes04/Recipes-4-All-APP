@@ -33,7 +33,7 @@ class searchRecipesDelegate extends SearchDelegate {
   @override
   Widget buildResults(BuildContext context) {
     return FutureBuilder(
-      future: recipesProvider.recivePopularRecipes(),
+      future: recipesProvider.reciveAllRecipes(),
       initialData: [],
       builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot) {
         List<dynamic>? recipes = snapshot.data;
@@ -43,7 +43,7 @@ class searchRecipesDelegate extends SearchDelegate {
             SliverList(
                 delegate: SliverChildListDelegate([
               Column(
-                children: searchedRecipes(context, recipes, searchInput),
+                children: searchedRecipes(context, recipes, searchInput)
               )
             ]))
           ],
@@ -57,7 +57,7 @@ class searchRecipesDelegate extends SearchDelegate {
     return Container(
       padding: EdgeInsets.all(10.0),
       child: Text(
-        'Search all your favorite recipes',
+        'Search here all your favorite recipes',
         style: descriptonRecipeStyle,
       ),
     );

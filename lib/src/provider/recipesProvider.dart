@@ -3,15 +3,15 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 
 class _recipesProvider {
-  List<dynamic> popularRecipes = [];
+  List<dynamic> allRecipes = [];
   List<dynamic> categories = [];
   List<dynamic> categoryRecipes = [];
 
-  Future<List<dynamic>> recivePopularRecipes() async {
+  Future<List<dynamic>> reciveAllRecipes() async {
     final response = await rootBundle.loadString('data/recipes.json');
     Map<String, dynamic> recipesMap = json.decode(response);
-    popularRecipes = recipesMap['All Recipes'];
-    return popularRecipes;
+    allRecipes = recipesMap['All Recipes'];
+    return allRecipes;
   }
 
   Future<List<dynamic>> reciveCategories() async {

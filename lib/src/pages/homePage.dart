@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
                   SwiperCategory(),
                   titles('Popular Recipes'),
                   FutureBuilder(
-                    future: recipesProvider.recivePopularRecipes(),
+                    future: recipesProvider.reciveAllRecipes(),
                     initialData: [],
                     builder: (BuildContext context,
                         AsyncSnapshot<List<dynamic>> snapshot) {

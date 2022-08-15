@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 //Styles
@@ -5,17 +7,20 @@ import '../styles/styles.dart';
 
 List<Widget> searchedRecipes(
     BuildContext context, List<dynamic>? recipes, String searchInput) {
-  final List<Widget> recipesList = [];
+  final List<Widget> resultsList = [];
 
+  int i = 0;
   recipes?.forEach((recipe) {
     var title = recipe['Title'].toString();
     if (title.contains(searchInput)) {
+      i++;
       final recipesListWidgetProvider =
           _minimizedRecipe(context, titlesStyle, recipe);
-      recipesList.add(recipesListWidgetProvider);
+      resultsList.add(recipesListWidgetProvider);
     }
   });
-  return recipesList;
+  print('$i resultados para a sua pesquisa'); //i = num of search results
+  return resultsList;
 }
 
 Widget _minimizedRecipe(

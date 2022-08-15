@@ -11,7 +11,8 @@ final colorWhite = Color.fromRGBO(255, 255, 255, 1.0);
 final titlesStyle = TextStyle(
   fontWeight: FontWeight.bold,
   color: colorTitle,
-  fontSize: 24.0
+  fontSize: 24.0,
+
 );
 
 final titleMinimizedRecipeStyle = TextStyle(
