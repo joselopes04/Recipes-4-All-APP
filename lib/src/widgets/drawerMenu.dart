@@ -28,7 +28,7 @@ class DrawerMenu extends StatelessWidget {
               leading: Icon(Icons.bookmark, color: colorIcons),
               title: Text('Favorites'),
               onTap: (){
-                Navigator.pushNamed(context, 'category');
+                Navigator.pushNamed(context, 'welcome');
               },
             ),
             ListTile(

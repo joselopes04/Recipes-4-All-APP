@@ -75,7 +75,7 @@
         },
         {
           "Name": "Peperoni 250g ",
-          "Photo": "https://cdn.shopify.com/s/files/1/1091/0010/products/PB110341_x720.jpg?v=1636733701"
+          "Photo": "https://cdn.shopify.com/s/files/1/1091/0010/products/pepperoni_x720.jpg?v=1660637930"
         },
         {
           "Name": "1/2 onion",
@@ -153,11 +153,11 @@
     },
     {
       "name": "Sweets and desserts",
-      "Image": "https://img.freepik.com/free-photo/belgium-waffles-with-strawberries-ice-cream-white-plate_2829-16340.jpg?w=360&t=st=1659803023~exp=1659803623~hmac=e0749fcc29e6b4746ae634e143bbef651108af83d0150a2699cc52faa9094f65"
+      "Image": "https://images.unsplash.com/photo-1564747519847-6414d97fc3b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
     },
     {
       "name": "Cakes and pies",
-      "Image": "https://img.freepik.com/free-photo/assortment-pieces-cake_114579-30731.jpg?w=996&t=st=1659613610~exp=1659614210~hmac=880bbe9d33d24cdbdbf782d354d75cd9558386fee1d1e947cf2d14e72cc852a6"
+      "Image": "https://img.freepik.com/free-photo/assortment-pieces-cake_114579-28235.jpg?w=996&t=st=1661808447~exp=1661809047~hmac=0a733abf975b4714f951984db909f499dccc83c308770880455cc29c618d5cc2"
     },
     {
       "name": "Breakfast",
@@ -173,11 +173,11 @@
     },
     {
       "name": "Appetizer and snacks",
-      "Image": "https://img.freepik.com/free-photo/italian-sandwiches-bruschetta-with-cheese-dry-tomatoes-basil_114579-14260.jpg?w=360&t=st=1659803356~exp=1659803956~hmac=b12b21685a16c689dbf7d5e520ddb183fb1dddbe831a803a11f52cf6fbbda496"
+      "Image": "https://img.freepik.com/free-photo/antipasto-catering-platter-with-bacon-jerky-sausage-blue-cheese-grapes-wooden-table-top-view_2829-5496.jpg?w=996&t=st=1661809576~exp=1661810176~hmac=3fe08610510104e6ef3e6bb376434454d7e13268f6982449fe4c7dc05fe7c1ae"
     },
     {
       "name": "Soups",
-      "Image": "https://img.freepik.com/free-photo/chicket-soup-with-piece-meat-tomato-sauce-copped-parsley-white-bowl-decorated-with-turshu-wooden-table_114579-276.jpg?w=360&t=st=1659613272~exp=1659613872~hmac=8eec15fc9184b6e91672418314ee0644022c77afb0173977cf106aa5ce7d5c8f"
+      "Image": "https://img.freepik.com/free-photo/soup-set-mushroom-lentil-pumpkin-tomato-chicken-side-view_141793-12551.jpg?w=996&t=st=1661808277~exp=1661808877~hmac=66c965c2bbe910fc72375ec9fc940a48453813a0d7e06fb7a28017ed61053257"
     },
     {
       "name": "Around the world",
@@ -185,7 +185,7 @@
     },
     {
       "name": "Holidays",
-      "Image": "https://img.freepik.com/free-photo/delicious-christmas-food-composition_23-2148719828.jpg?w=996&t=st=1659613425~exp=1659614025~hmac=84489c4beb86e972eace5578c2aa6be1bf9c319909dcf664c4733168b6cb113b"
+      "Image": "https://img.freepik.com/free-photo/flat-lay-festive-christmas-food-assortment-with-copy-space_23-2148719894.jpg?w=996&t=st=1661808088~exp=1661808688~hmac=9ad7abc99d044328e27767b870b7a0a855c5c81487e125c7cc2341fdc42e11ba"
     }
   ],
   "Breakfast": [
@@ -266,7 +266,7 @@
         },
         {
           "Name": "Peperoni 250g ",
-          "Photo": "https://cdn.shopify.com/s/files/1/1091/0010/products/PB110341_x720.jpg?v=1636733701"
+          "Photo": "https://cdn.shopify.com/s/files/1/1091/0010/products/pepperoni_x720.jpg?v=1660637930"
         },
         {
           "Name": "1/2 onion",
