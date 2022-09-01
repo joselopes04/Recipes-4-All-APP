@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:like_button/like_button.dart';
 
 //External libraries
 import 'package:url_launcher/url_launcher_string.dart';
+import 'package:like_button/like_button.dart';
 
 //Styles
 import '../styles/styles.dart';
 
 //Widgets
+import 'package:Recipes_app/src/widgets/appBars.dart';
 import 'package:Recipes_app/src/widgets/swiperIngredients.dart';
 import 'package:Recipes_app/src/widgets/titles.dart';
-import '../widgets/appBarRecipe.dart';
 
 class RecipePage extends StatelessWidget {
   @override

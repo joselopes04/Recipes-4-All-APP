@@ -4,6 +4,9 @@ import 'dart:ui';
 //Styles
 import '../styles/styles.dart';
 
+//Widgets
+import 'package:Recipes_app/src/widgets/buttons.dart';
+
 class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -37,55 +40,39 @@ class WelcomePage extends StatelessWidget {
                   'Here you can find and learn new recipes step by step.',
                   style: welcomeTextStyle),
             ),
-            Container(
-              width: 300.0,
-              height: 45.0,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  primary: colorLoginBtn,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                ),
-                child: Text('Log In'),
-              ),
-            ),
+            loginButton(context),
             SizedBox(height: 15.0),
             Container(
               width: 300.0,
               height: 45.0,
               child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  primary: colorWhite,
-                  onPrimary: colorBlack,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'home');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: colorWhite,
+                    onPrimary: colorBlack,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
                   ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image(image: AssetImage('assets/images/googleLogo.png')),
-                    Text('Sign in with Google'),
-                  ],
-                )
-              ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image(image: AssetImage('assets/images/googleLogo.png')),
+                      Text('Sign in with Google'),
+                    ],
+                  )),
             ),
             GestureDetector(
-              onTap: (){
-                Navigator.pushNamed(context, '/');
+              onTap: () {
+                Navigator.pushNamed(context, 'home');
               },
               child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
-                  child: Text(
-                      'Navigate as guest',
-                      style: welcomeTextStyle
-                  ),
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
+                child: Text('Navigate as guest', style: welcomeTextStyle),
               ),
             )
-
           ],
         )
       ],

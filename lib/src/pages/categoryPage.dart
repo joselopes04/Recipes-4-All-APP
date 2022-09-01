@@ -11,7 +11,7 @@ import '../styles/styles.dart';
 
 //Widgets
 import '../widgets/drawerMenu.dart';
-import 'package:Recipes_app/src/widgets/appBar.dart';
+import 'package:Recipes_app/src/widgets/appBars.dart';
 
 class CategoryPage extends StatelessWidget {
   @override

@@ -11,7 +11,7 @@ import 'package:Recipes_app/src/styles/styles.dart';
 
 //Widgets
 import 'package:Recipes_app/src/widgets/titles.dart';
-import 'package:Recipes_app/src/widgets/appBar.dart';
+import 'package:Recipes_app/src/widgets/appBars.dart';
 import 'package:Recipes_app/src/widgets/swiperRecents.dart';
 import 'package:Recipes_app/src/widgets/drawerMenu.dart';
 import '../widgets/swiperCategories.dart';

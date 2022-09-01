@@ -5,6 +5,7 @@ import 'package:Recipes_app/src/pages/categoryPage.dart';
 import 'package:Recipes_app/src/pages/homePage.dart';
 import 'package:Recipes_app/src/pages/recipePage.dart';
 import 'package:Recipes_app/src/pages/welcomePage.dart';
+import 'package:Recipes_app/src/pages/loginPage.dart';
 
 //Firebase
 import 'package:firebase_core/firebase_core.dart';
@@ -22,9 +23,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // home: WelcomePage(),
       routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => HomePage(),
-        'welcome': (BuildContext context) => WelcomePage(),
+        '/': (BuildContext context) => WelcomePage(),
+        'login': (BuildContext context) => LoginPage(),
+        'home': (BuildContext context) => HomePage(),
         'category': (BuildContext context) => CategoryPage(),
         'recipe': (BuildContext context) => RecipePage(),
       },

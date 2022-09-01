@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+
 //Colors
 final colorBG = Color.fromRGBO(200, 200, 222, 1.0);
 final colorIcons = Color.fromRGBO(255, 104, 0, 1.0);
 final colorLoginBtn = Color.fromRGBO(232, 152, 64, 1.0);
+final colorContainerInput = Color.fromRGBO(142, 142, 147, 1.2);
 
 final colorGrey = Color.fromRGBO(128, 128, 128, 0.8);
 final colorWhite = Color.fromRGBO(255, 255, 255, 1.0);
@@ -20,6 +22,12 @@ final welcomeTextStyle = TextStyle(
   fontWeight: FontWeight.w400,
   color: colorWhite,
   fontSize: 18.0,
+);
+
+final loginTitleStyle = TextStyle(
+  fontWeight: FontWeight.bold,
+  color: colorBlack,
+  fontSize: 30.0,
 );
 
 final titlesStyle = TextStyle(
