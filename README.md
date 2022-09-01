@@ -1,16 +1,27 @@
-# recipes_for_all
+# Recipes 4 All
+<h3 align="center">🏗️Under development🏗️</h3>
 
-A new Flutter project.
+<p align="center"><img width=20% src=https://github.com/joselopes04/Recipes_app/blob/master/assets/images/logo.jpg></p>
 
-## Getting Started
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+An app to show cooking recipes 
 
-This project is a starting point for a Flutter application.
+## Table of content
+- [Software used](#software-used)
+- [Screenshots](#screenshots)
+- [Aplication Details](#aplication-details)
+- [Authors](#authors)
 
-A few resources to get you started if this is your first Flutter project:
+## Software used
+Android Studio <br>
+Flutter <br>
+Firebase
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Aplication details
+
+
+## Authors
+- [José Lopes](https://www.github.com/joselopes04)
