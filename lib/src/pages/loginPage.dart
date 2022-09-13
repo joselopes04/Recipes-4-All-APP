@@ -26,24 +26,29 @@ class LoginPage extends StatelessWidget {
           ],
         ),
         Container(
-          margin: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
+          margin: EdgeInsets.all(20.0),
           child: Center(
             child: Column(
               children: [
-                Text('Welcome back', style: loginTitleStyle),
+                Text('Welcome back', style: bigTitleStyle),
                 SizedBox(height: 10.0),
                 Text('Login to your account', style: titleMinimizedRecipeStyle),
                 emailInput(),
                 passwordInput(),
                 Container(
-                  margin: EdgeInsets.only(top: 10.0),
-                  child: Text('Forgot your password ?'),
-                ),
+                    margin: EdgeInsets.only(top: 10.0),
+                    child: GestureDetector(
+                        child: Text('Forgot your password ?',
+                            style: linksTextStyle),
+                        onTap: () {
+                          Navigator.pushNamed(context, 'forgotPassword');
+                        })),
                 SizedBox(height: 20.0),
                 signInButton(context),
                 Container(
                   margin: EdgeInsets.only(top: 15.0),
-                  child: Text('Dont have an account ? Sign up '),
+                  child: Text('Dont have an account ? Sign up ',
+                      style: linksTextStyle),
                 ),
               ],
             ),
@@ -53,4 +58,3 @@ class LoginPage extends StatelessWidget {
     ));
   }
 }
-

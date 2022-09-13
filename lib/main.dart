@@ -6,6 +6,7 @@ import 'package:Recipes_app/src/pages/homePage.dart';
 import 'package:Recipes_app/src/pages/recipePage.dart';
 import 'package:Recipes_app/src/pages/welcomePage.dart';
 import 'package:Recipes_app/src/pages/loginPage.dart';
+import 'package:Recipes_app/src/pages/forgotPasswordPage.dart';
 
 //Firebase
 import 'package:firebase_core/firebase_core.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => WelcomePage(),
         'login': (BuildContext context) => LoginPage(),
+        'forgotPassword': (BuildContext context) => ForgotPasswordPage(),
         'home': (BuildContext context) => HomePage(),
         'category': (BuildContext context) => CategoryPage(),
         'recipe': (BuildContext context) => RecipePage(),

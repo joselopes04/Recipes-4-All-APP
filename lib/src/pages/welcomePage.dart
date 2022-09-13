@@ -32,13 +32,13 @@ class WelcomePage extends StatelessWidget {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child:
-                  Text('WELCOME TO RECIPES 4 ALL', style: welcomeTitlesStyle),
+                  Text('WELCOME TO RECIPES 4 ALL', style: giantTitlesStyle),
             ),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
               child: Text(
                   'Here you can find and learn new recipes step by step.',
-                  style: welcomeTextStyle),
+                  style: descriptionTextStyle),
             ),
             loginButton(context),
             SizedBox(height: 15.0),
@@ -70,7 +70,7 @@ class WelcomePage extends StatelessWidget {
               },
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
-                child: Text('Navigate as guest', style: welcomeTextStyle),
+                child: Text('Navigate as guest', style: descriptionTextStyle),
               ),
             )
           ],

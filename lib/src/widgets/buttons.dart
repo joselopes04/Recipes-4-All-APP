@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+//Pages
+import '../pages/forgotPasswordPage.dart';
+
 //Styles
 import '../styles/styles.dart';
 
@@ -39,7 +42,6 @@ Widget signInButton(BuildContext context) {
     height: 45.0,
     child: ElevatedButton(
       onPressed: () {
-        Navigator.pushNamed(context, 'SignIn');
       },
       style: ElevatedButton.styleFrom(
         primary: colorLoginBtn,
@@ -52,4 +54,40 @@ Widget signInButton(BuildContext context) {
   );
 }
 
+Widget forgotPasswordButton(BuildContext context) {
+  return Container(
+    width: 300.0,
+    height: 45.0,
+    child: ElevatedButton(
+      onPressed: () {
+        showAlert(context);
+      },
+      style: ElevatedButton.styleFrom(
+        primary: colorLoginBtn,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+      ),
+      child: Text('Reset password'),
+    ),
+  );
+}
 
+Widget doneButton(BuildContext context) {
+  return Container(
+    width: 300.0,
+    height: 45.0,
+    child: ElevatedButton(
+      onPressed: () {
+        Navigator.pushNamed(context, 'login');
+      },
+      style: ElevatedButton.styleFrom(
+        primary: colorLoginBtn,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+      ),
+      child: Text('Done'),
+    ),
+  );
+}

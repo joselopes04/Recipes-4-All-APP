@@ -7,7 +7,7 @@ Widget emailInput() {
   return Container(
     margin: EdgeInsets.only(top: 20.0),
     padding: EdgeInsets.only(left: 20.0),
-    // height: 45.0,
+     height: 55.0,
     decoration: BoxDecoration(
       color: colorContainerInput,
       borderRadius: BorderRadius.circular(30.0)
@@ -28,7 +28,7 @@ Widget passwordInput() {
   return Container(
     margin: EdgeInsets.only(top: 20.0),
     padding: EdgeInsets.only(left: 20.0),
-    // height: 45.0,
+     height: 55.0,
     decoration: BoxDecoration(
         color: colorContainerInput,
         borderRadius: BorderRadius.circular(30.0)
