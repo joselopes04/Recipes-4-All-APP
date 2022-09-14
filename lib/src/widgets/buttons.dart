@@ -42,6 +42,7 @@ Widget signInButton(BuildContext context) {
     height: 45.0,
     child: ElevatedButton(
       onPressed: () {
+        Navigator.pushNamed(context, 'home');
       },
       style: ElevatedButton.styleFrom(
         primary: colorLoginBtn,
@@ -50,6 +51,24 @@ Widget signInButton(BuildContext context) {
         ),
       ),
       child: Text('Log In with email'),
+    ),
+  );
+}
+
+Widget signUpButton(BuildContext context) {
+  return Container(
+    width: 300.0,
+    height: 45.0,
+    child: ElevatedButton(
+      onPressed: () {
+      },
+      style: ElevatedButton.styleFrom(
+        primary: colorLoginBtn,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+      ),
+      child: Text('Sign Up'),
     ),
   );
 }
@@ -91,3 +110,23 @@ Widget doneButton(BuildContext context) {
     ),
   );
 }
+
+Widget closePopUpButton(BuildContext context) {
+  return Container(
+    width: 300.0,
+    height: 45.0,
+    child: ElevatedButton(
+      onPressed: () {
+        Navigator.of(context).pop();
+      },
+      style: ElevatedButton.styleFrom(
+        primary: colorLoginBtn,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+      ),
+      child: Text('Close'),
+    ),
+  );
+}
+

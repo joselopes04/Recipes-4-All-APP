@@ -24,6 +24,27 @@ Widget emailInput() {
   );
 }
 
+Widget usernameInput() {
+  return Container(
+    margin: EdgeInsets.only(top: 20.0),
+    padding: EdgeInsets.only(left: 20.0),
+    height: 55.0,
+    decoration: BoxDecoration(
+        color: colorContainerInput,
+        borderRadius: BorderRadius.circular(30.0)
+    ),
+    child: TextField(
+      keyboardType: TextInputType.name,
+      decoration: InputDecoration(
+          hintText: 'Username',
+          border: OutlineInputBorder(
+              borderSide: BorderSide.none
+          )
+      ),
+    ),
+  );
+}
+
 Widget passwordInput() {
   return Container(
     margin: EdgeInsets.only(top: 20.0),

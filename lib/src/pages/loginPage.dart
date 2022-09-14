@@ -46,10 +46,13 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 20.0),
                 signInButton(context),
                 Container(
-                  margin: EdgeInsets.only(top: 15.0),
-                  child: Text('Dont have an account ? Sign up ',
-                      style: linksTextStyle),
-                ),
+                    margin: EdgeInsets.only(top: 15.0),
+                    child: GestureDetector(
+                        child: Text("Don't have an account ? Sign up",
+                            style: linksTextStyle),
+                        onTap: () {
+                          Navigator.pushNamed(context, 'registration');
+                        })),
               ],
             ),
           ),

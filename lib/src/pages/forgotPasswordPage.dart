@@ -51,8 +51,9 @@ void showAlert(BuildContext context){
           borderRadius: BorderRadius.all(Radius.circular(20.0))
       ),
       content: Container(
-        height: 400.0,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
           children: [
             Image(
               image: AssetImage('assets/images/reset-password.png'),
