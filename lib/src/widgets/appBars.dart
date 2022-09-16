@@ -35,7 +35,6 @@ Widget appBar(BuildContext context, String title){
 }
 
 Widget appBarRecipe(String image){
-
   return SliverAppBar(
     backgroundColor: colorBG,
     floating: false,

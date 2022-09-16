@@ -11,6 +11,7 @@ import 'package:Recipes_app/src/styles/styles.dart';
 
 //Widgets
 import 'package:Recipes_app/src/widgets/titles.dart';
+import 'package:Recipes_app/src/widgets/bottomNavigation.dart';
 import 'package:Recipes_app/src/widgets/appBars.dart';
 import 'package:Recipes_app/src/widgets/swiperRecents.dart';
 import 'package:Recipes_app/src/widgets/drawerMenu.dart';
@@ -22,6 +23,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         drawer: const DrawerMenu(),
         backgroundColor: colorBG,
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: colorIcons,
+          onPressed: () {},
+          child: Icon(Icons.add),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: CustomScrollView(
           slivers: <Widget>[
             appBar(context, 'Home'),
@@ -47,6 +54,7 @@ class HomePage extends StatelessWidget {
               )
             ]))
           ],
-        ));
+        ),
+        bottomNavigationBar: bottomNavigation(context));
   }
 }

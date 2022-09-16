@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+//Styles
 import '../styles/styles.dart';
+
+//Widgets
 import '../widgets/buttons.dart';
 import '../widgets/textInputs.dart';
 
@@ -46,6 +49,7 @@ class RegistrationPage extends StatelessWidget {
   }
 }
 
+//Terms and Conditions
 void showAlert(BuildContext context) {
   showDialog(
       context: context,

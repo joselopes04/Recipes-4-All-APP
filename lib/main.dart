@@ -1,3 +1,6 @@
+import 'package:Recipes_app/src/pages/favoritesPage.dart';
+import 'package:Recipes_app/src/pages/shoppingListPage.dart';
+import 'package:Recipes_app/src/pages/userPage.dart';
 import 'package:flutter/material.dart';
 
 //Pages
@@ -28,10 +31,19 @@ class MyApp extends StatelessWidget {
       // home: WelcomePage(),
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => WelcomePage(),
+
+        //Account
         'login': (BuildContext context) => LoginPage(),
         'registration': (BuildContext context) => RegistrationPage(),
         'forgotPassword': (BuildContext context) => ForgotPasswordPage(),
+
+        //Bottom Navigation
         'home': (BuildContext context) => HomePage(),
+        'favorites': (BuildContext context) => FavoritesPage(),
+        'shoppingList': (BuildContext context) => ShoppingListPage(),
+        'user': (BuildContext context) => UserPage(),
+
+        //Recipes
         'category': (BuildContext context) => CategoryPage(),
         'recipe': (BuildContext context) => RecipePage(),
       },

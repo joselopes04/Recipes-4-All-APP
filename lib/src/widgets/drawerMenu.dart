@@ -25,15 +25,15 @@ class DrawerMenu extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.bookmark, color: colorIcons),
-              title: Text('Favorites'),
+              leading: Icon(Icons.favorite, color: colorIcons),
+              title: Text('Liked Recipes'),
               onTap: (){
                 Navigator.pushNamed(context, 'welcome');
               },
             ),
             ListTile(
-              leading: Icon(Icons.shopping_basket, color: colorIcons),
-              title: Text('Shoping list'),
+              leading: Icon(Icons.message, color: colorIcons),
+              title: Text('FAQ'),
               onTap: (){
                 Navigator.pushNamed(context, 'category');
               },
@@ -48,6 +48,13 @@ class DrawerMenu extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.info, color: colorIcons),
               title: Text('About the app'),
+              onTap: (){
+                Navigator.pushNamed(context, 'category');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.star, color: colorIcons),
+              title: Text('Premium'),
               onTap: (){
                 Navigator.pushNamed(context, 'category');
               },
