@@ -44,7 +44,12 @@ class LoginPage extends StatelessWidget {
                           Navigator.pushNamed(context, 'forgotPassword');
                         })),
                 SizedBox(height: 20.0),
-                signInButton(context),
+                BasicButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'home');
+                  },
+                  text: 'Sign Up',
+                ),
                 Container(
                     margin: EdgeInsets.only(top: 15.0),
                     child: GestureDetector(

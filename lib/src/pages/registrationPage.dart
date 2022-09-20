@@ -40,7 +40,11 @@ class RegistrationPage extends StatelessWidget {
                     child: Text("Terms and conditions.", style: linksTextStyle),
                   ),
                   SizedBox(height: 20.0),
-                  signUpButton(context)
+                  BasicButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'home');
+                    }, text: 'Sign Up',
+                  ),
                 ]),
               ),
             ),
@@ -92,7 +96,11 @@ void showAlert(BuildContext context) {
                         style: smallTextStyle,
                         textAlign: TextAlign.left,
                       ),
-                      closePopUpButton(context)
+                      BasicButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        }, text: 'Close',
+                      ),
                     ],
                   ),
                 ),
