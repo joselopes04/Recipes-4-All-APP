@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 //Styles
 import '../styles/styles.dart';
 
-Widget emailInput() {
+Widget emailInput(TextEditingController controller) {
   return Container(
     margin: EdgeInsets.only(top: 20.0),
     padding: EdgeInsets.only(left: 20.0),
@@ -13,6 +13,7 @@ Widget emailInput() {
       borderRadius: BorderRadius.circular(30.0)
     ),
     child: TextField(
+      controller: controller,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         hintText: 'Email',
@@ -45,7 +46,7 @@ Widget usernameInput() {
   );
 }
 
-Widget passwordInput() {
+Widget passwordInput(TextEditingController controller) {
   return Container(
     margin: EdgeInsets.only(top: 20.0),
     padding: EdgeInsets.only(left: 20.0),
@@ -55,6 +56,7 @@ Widget passwordInput() {
         borderRadius: BorderRadius.circular(30.0)
     ),
     child: TextField(
+      controller: controller,
       obscureText: true,
       decoration: InputDecoration(
           hintText: 'Password',

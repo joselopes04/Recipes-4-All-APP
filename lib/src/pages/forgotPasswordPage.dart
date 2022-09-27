@@ -8,7 +8,6 @@ import 'package:Recipes_app/src/widgets/buttons.dart';
 import 'package:Recipes_app/src/widgets/textInputs.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
-  String btnText = "Reset password";
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +35,7 @@ class ForgotPasswordPage extends StatelessWidget {
                   style: smallTextStyle,
                   textAlign: TextAlign.center),
             ),
-            emailInput(),
+            //emailInput(),
             SizedBox(height: 35.0),
             BasicButton(
               onPressed: () {

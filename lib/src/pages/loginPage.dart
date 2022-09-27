@@ -1,13 +1,44 @@
 import 'package:flutter/material.dart';
 
+//Firebase
+import 'package:firebase_auth/firebase_auth.dart';
+
 //Styles
 import '../styles/styles.dart';
+
+//Classes
+import 'package:Recipes_app/src/userManagement/auth.dart';
 
 //Widgets
 import 'package:Recipes_app/src/widgets/buttons.dart';
 import 'package:Recipes_app/src/widgets/textInputs.dart';
 
-class LoginPage extends StatelessWidget {
+
+class LoginPage extends StatefulWidget {
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String? errorMessage = 'Error:';
+
+  TextEditingController  controllerEmail = TextEditingController();
+  TextEditingController  controllerPassword = TextEditingController();
+
+ Future<void> signInWithEmailAndPassword() async{
+   try {
+     await Auth().signInWithEmailAndPassword(
+         email: controllerEmail.text,
+         password: controllerPassword.text,
+     );
+     Navigator.pushNamed(context, 'home');
+   } on FirebaseAuthException catch (e) {
+     setState((){
+       errorMessage = e.message;
+     });
+   }
+ }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,8 +64,8 @@ class LoginPage extends StatelessWidget {
                 Text('Welcome back', style: bigTitleStyle),
                 SizedBox(height: 10.0),
                 Text('Login to your account', style: titleMinimizedRecipeStyle),
-                emailInput(),
-                passwordInput(),
+                emailInput(controllerEmail),
+                passwordInput(controllerPassword),
                 Container(
                     margin: EdgeInsets.only(top: 10.0),
                     child: GestureDetector(
@@ -46,7 +77,7 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 20.0),
                 BasicButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'home');
+                    signInWithEmailAndPassword();
                   },
                   text: 'Sign Up',
                 ),

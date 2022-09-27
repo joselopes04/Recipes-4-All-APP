@@ -1,13 +1,43 @@
 import 'package:flutter/material.dart';
 
+//Firebase
+import 'package:firebase_auth/firebase_auth.dart';
+
 //Styles
 import '../styles/styles.dart';
+
+//Classes
+import 'package:Recipes_app/src/userManagement/auth.dart';
 
 //Widgets
 import '../widgets/buttons.dart';
 import '../widgets/textInputs.dart';
 
-class RegistrationPage extends StatelessWidget {
+class RegistrationPage extends StatefulWidget {
+  @override
+  State<RegistrationPage> createState() => _RegistrationPage();
+}
+
+class _RegistrationPage extends State<RegistrationPage> {
+  String? errorMessage = 'Error:';
+
+  TextEditingController  controllerEmail = TextEditingController();
+  TextEditingController  controllerPassword = TextEditingController();
+
+  Future<void> createUserWithEmailAndPassword() async{
+    try {
+      await Auth().createUserWithEmailAndPassword(
+        email: controllerEmail.text,
+        password: controllerPassword.text,
+      );
+      Navigator.pushNamed(context, 'login');
+    } on FirebaseAuthException catch (e) {
+      setState((){
+        errorMessage = e.message;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,8 +59,8 @@ class RegistrationPage extends StatelessWidget {
                   Text('Create an account', style: bigTitleStyle),
                   SizedBox(height: 20.0),
                   usernameInput(),
-                  emailInput(),
-                  passwordInput(),
+                  emailInput(controllerEmail),
+                  passwordInput(controllerPassword),
                   SizedBox(height: 10.0),
                   Text("By clicking Sign Up you agree with our "),
                   GestureDetector(
@@ -42,7 +72,7 @@ class RegistrationPage extends StatelessWidget {
                   SizedBox(height: 20.0),
                   BasicButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, 'home');
+                      createUserWithEmailAndPassword();
                     }, text: 'Sign Up',
                   ),
                 ]),
@@ -51,6 +81,7 @@ class RegistrationPage extends StatelessWidget {
           ],
         ));
   }
+
 }
 
 //Terms and Conditions
