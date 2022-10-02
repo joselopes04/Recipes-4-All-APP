@@ -21,11 +21,12 @@ class RegistrationPage extends StatefulWidget {
 class _RegistrationPage extends State<RegistrationPage> {
   String? errorMessage = 'Error:';
 
-  TextEditingController  controllerUsername = TextEditingController();
-  TextEditingController  controllerEmail = TextEditingController();
-  TextEditingController  controllerPassword = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
+  TextEditingController controllerUsername = TextEditingController();
+  TextEditingController controllerEmail = TextEditingController();
+  TextEditingController controllerPassword = TextEditingController();
 
-  Future<void> createUserWithEmailAndPassword() async{
+  Future<void> createUserWithEmailAndPassword() async {
     try {
       await Auth().createUserWithEmailAndPassword(
         email: controllerEmail.text.trim(),
@@ -33,7 +34,7 @@ class _RegistrationPage extends State<RegistrationPage> {
       );
       Navigator.pushNamed(context, 'login');
     } on FirebaseAuthException catch (e) {
-      setState((){
+      setState(() {
         errorMessage = e.message;
       });
     }
@@ -56,35 +57,44 @@ class _RegistrationPage extends State<RegistrationPage> {
             Container(
               margin: EdgeInsets.all(20.0),
               child: Center(
-                child: Column(children: [
-                  Text('Create an account', style: bigTitleStyle),
-                  SizedBox(height: 30.0),
-                  usernameInput(controllerUsername),
-                  SizedBox(height: 25.0),
-                  emailInput(controllerEmail),
-                  SizedBox(height: 25.0),
-                  passwordInput(controllerPassword),
-                  SizedBox(height: 10.0),
-                  Text("By clicking Sign Up you agree with our "),
-                  GestureDetector(
-                    onTap: () {
-                      showAlert(context);
-                    },
-                    child: Text("Terms and conditions.", style: linksTextStyle),
-                  ),
-                  SizedBox(height: 20.0),
-                  BasicButton(
-                    onPressed: () {
-                      createUserWithEmailAndPassword();
-                    }, text: 'Sign Up',
-                  ),
-                ]),
+                child: Form(
+                  key: _formKey,
+                  child: Column(children: [
+                    Text('Create an account', style: bigTitleStyle),
+                    SizedBox(height: 30.0),
+                    usernameInput(controllerUsername),
+                    SizedBox(height: 25.0),
+                    emailInput(controllerEmail),
+                    SizedBox(height: 25.0),
+                    passwordInput(controllerPassword),
+                    SizedBox(height: 10.0),
+                    Text("By clicking Sign Up you agree with our "),
+                    GestureDetector(
+                      onTap: () {
+                        showAlert(context);
+                      },
+                      child:
+                          Text("Terms and conditions.", style: linksTextStyle),
+                    ),
+                    SizedBox(height: 20.0),
+                    BasicButton(
+                      onPressed: () async {
+                        if (_formKey.currentState!.validate()) {
+                          print("valid");
+                          createUserWithEmailAndPassword();
+                        } else {
+                          print("Not Valid");
+                        }
+                      },
+                      text: 'Sign Up',
+                    ),
+                  ]),
+                ),
               ),
-            ),
+            )
           ],
         ));
   }
-
 }
 
 //Terms and Conditions
@@ -133,7 +143,8 @@ void showAlert(BuildContext context) {
                       BasicButton(
                         onPressed: () {
                           Navigator.of(context).pop();
-                        }, text: 'Close',
+                        },
+                        text: 'Close',
                       ),
                     ],
                   ),

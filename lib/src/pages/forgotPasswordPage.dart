@@ -7,9 +7,15 @@ import '../styles/styles.dart';
 import 'package:Recipes_app/src/widgets/buttons.dart';
 import 'package:Recipes_app/src/widgets/textInputs.dart';
 
-class ForgotPasswordPage extends StatelessWidget {
+class ForgotPasswordPage extends StatefulWidget {
+  @override
+  State<ForgotPasswordPage> createState() => _ForgotPasswordPage();
+}
+
+class _ForgotPasswordPage extends State<ForgotPasswordPage>{
 
   TextEditingController controllerEmail = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -25,29 +31,31 @@ class ForgotPasswordPage extends StatelessWidget {
       ),
       body: Center(
           child: Container(
-        padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 40.0),
-        child: Column(
-          children: [
-            Text('Forgot password', style: bigTitleStyle),
-            SizedBox(height: 10.0),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              child: Text(
-                  'Please enter your email address. You will receive a link to create a new password via email.',
-                  style: smallTextStyle,
-                  textAlign: TextAlign.center),
-            ),
-            emailInput(controllerEmail),
-            SizedBox(height: 35.0),
-            BasicButton(
-              onPressed: () {
-                showAlert(context);
-              },
-              text: 'Reset password',
-            ),
-          ],
-        ),
-      )),
+              padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 40.0),
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  children: [
+                    Text('Forgot password', style: bigTitleStyle),
+                    SizedBox(height: 10.0),
+                    Container(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text(
+                          'Please enter your email address. You will receive a link to create a new password via email.',
+                          style: smallTextStyle,
+                          textAlign: TextAlign.center),
+                    ),
+                    emailInput(controllerEmail),
+                    SizedBox(height: 35.0),
+                    BasicButton(
+                      onPressed: () {
+                        showAlert(context);
+                      },
+                      text: 'Reset password',
+                    ),
+                  ],
+                ),
+              ))),
     );
   }
 }
