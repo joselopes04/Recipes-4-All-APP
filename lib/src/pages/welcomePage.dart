@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
+//UserManagement
+import 'package:Recipes_app/src/userManagement/auth.dart';
+
 //Styles
 import '../styles/styles.dart';
 
@@ -8,6 +11,9 @@ import '../styles/styles.dart';
 import 'package:Recipes_app/src/widgets/buttons.dart';
 
 class WelcomePage extends StatelessWidget {
+
+  final Auth _auth = Auth();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,8 +75,10 @@ class WelcomePage extends StatelessWidget {
                   )),
             ),
             GestureDetector(
-              onTap: () {
+              onTap: () async{
+                dynamic result = await _auth.signInGuest();
                 Navigator.pushNamed(context, 'home');
+                 print(result.uid +" "+ result.isAnonymous);
               },
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),

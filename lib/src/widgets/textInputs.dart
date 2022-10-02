@@ -4,66 +4,55 @@ import 'package:flutter/material.dart';
 import '../styles/styles.dart';
 
 Widget emailInput(TextEditingController controller) {
-  return Container(
-    margin: EdgeInsets.only(top: 20.0),
-    padding: EdgeInsets.only(left: 20.0),
-     height: 55.0,
-    decoration: BoxDecoration(
-      color: colorContainerInput,
-      borderRadius: BorderRadius.circular(30.0)
-    ),
-    child: TextField(
+  return TextFormField(
       controller: controller,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
+        filled: true,
+        fillColor: colorContainerInput,
         hintText: 'Email',
-        border: OutlineInputBorder(
-          borderSide: BorderSide.none
-        )
+        border: UnderlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
       ),
-    ),
-  );
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+      validator: (email) {
+        if (email!.isEmpty) {
+          return "Please enter a  email";
+        };
+      });
 }
 
-Widget usernameInput() {
-  return Container(
-    margin: EdgeInsets.only(top: 20.0),
-    padding: EdgeInsets.only(left: 20.0),
-    height: 55.0,
-    decoration: BoxDecoration(
-        color: colorContainerInput,
-        borderRadius: BorderRadius.circular(30.0)
-    ),
-    child: TextField(
+Widget usernameInput(TextEditingController controller) {
+  return TextFormField(
+      controller: controller,
       keyboardType: TextInputType.name,
       decoration: InputDecoration(
+          filled: true,
+          fillColor: colorContainerInput,
           hintText: 'Username',
-          border: OutlineInputBorder(
-              borderSide: BorderSide.none
-          )
-      ),
-    ),
-  );
+          border:
+              UnderlineInputBorder(borderRadius: BorderRadius.circular(20.0))),
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+      validator: (email) {
+        if (email!.isEmpty) {
+          return "Please enter a username";
+        };
+      });
 }
 
 Widget passwordInput(TextEditingController controller) {
-  return Container(
-    margin: EdgeInsets.only(top: 20.0),
-    padding: EdgeInsets.only(left: 20.0),
-     height: 55.0,
-    decoration: BoxDecoration(
-        color: colorContainerInput,
-        borderRadius: BorderRadius.circular(30.0)
-    ),
-    child: TextField(
+  return TextFormField(
       controller: controller,
       obscureText: true,
       decoration: InputDecoration(
+          filled: true,
+          fillColor: colorContainerInput,
           hintText: 'Password',
-          border: OutlineInputBorder(
-              borderSide: BorderSide.none
-          )
-      ),
-    ),
-  );
+          border:
+              UnderlineInputBorder(borderRadius: BorderRadius.circular(20.0))),
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+      validator: (email) {
+        if (email!.isEmpty) {
+          return "Please enter a strong password";
+        };
+      });
 }

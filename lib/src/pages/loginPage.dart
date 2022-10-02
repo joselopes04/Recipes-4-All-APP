@@ -12,6 +12,7 @@ import 'package:Recipes_app/src/userManagement/auth.dart';
 //Widgets
 import 'package:Recipes_app/src/widgets/buttons.dart';
 import 'package:Recipes_app/src/widgets/textInputs.dart';
+import 'package:Recipes_app/src/widgets/loadingAnimation.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -20,18 +21,22 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  String? errorMessage = 'Error:';
 
+  String? errorMessage = 'Error:';
   TextEditingController  controllerEmail = TextEditingController();
   TextEditingController  controllerPassword = TextEditingController();
 
+  bool loading = false;
+
  Future<void> signInWithEmailAndPassword() async{
    try {
+     setState(()=> loading = true);
      await Auth().signInWithEmailAndPassword(
-         email: controllerEmail.text,
-         password: controllerPassword.text,
+         email: controllerEmail.text.trim(),
+         password: controllerPassword.text.trim(),
      );
      Navigator.pushNamed(context, 'home');
+     setState(()=> loading = false);
    } on FirebaseAuthException catch (e) {
      setState((){
        errorMessage = e.message;
@@ -41,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? LoadingAnimation() : Scaffold(
         body: ListView(
       children: [
         Stack(
@@ -64,7 +69,9 @@ class _LoginPageState extends State<LoginPage> {
                 Text('Welcome back', style: bigTitleStyle),
                 SizedBox(height: 10.0),
                 Text('Login to your account', style: titleMinimizedRecipeStyle),
+                SizedBox(height: 20.0),
                 emailInput(controllerEmail),
+                SizedBox(height: 25.0),
                 passwordInput(controllerPassword),
                 Container(
                     margin: EdgeInsets.only(top: 10.0),

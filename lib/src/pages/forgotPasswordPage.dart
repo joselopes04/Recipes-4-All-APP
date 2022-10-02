@@ -9,6 +9,8 @@ import 'package:Recipes_app/src/widgets/textInputs.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
 
+  TextEditingController controllerEmail = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +37,7 @@ class ForgotPasswordPage extends StatelessWidget {
                   style: smallTextStyle,
                   textAlign: TextAlign.center),
             ),
-            //emailInput(),
+            emailInput(controllerEmail),
             SizedBox(height: 35.0),
             BasicButton(
               onPressed: () {

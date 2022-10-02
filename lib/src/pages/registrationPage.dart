@@ -21,14 +21,15 @@ class RegistrationPage extends StatefulWidget {
 class _RegistrationPage extends State<RegistrationPage> {
   String? errorMessage = 'Error:';
 
+  TextEditingController  controllerUsername = TextEditingController();
   TextEditingController  controllerEmail = TextEditingController();
   TextEditingController  controllerPassword = TextEditingController();
 
   Future<void> createUserWithEmailAndPassword() async{
     try {
       await Auth().createUserWithEmailAndPassword(
-        email: controllerEmail.text,
-        password: controllerPassword.text,
+        email: controllerEmail.text.trim(),
+        password: controllerPassword.text.trim(),
       );
       Navigator.pushNamed(context, 'login');
     } on FirebaseAuthException catch (e) {
@@ -57,9 +58,11 @@ class _RegistrationPage extends State<RegistrationPage> {
               child: Center(
                 child: Column(children: [
                   Text('Create an account', style: bigTitleStyle),
-                  SizedBox(height: 20.0),
-                  usernameInput(),
+                  SizedBox(height: 30.0),
+                  usernameInput(controllerUsername),
+                  SizedBox(height: 25.0),
                   emailInput(controllerEmail),
+                  SizedBox(height: 25.0),
                   passwordInput(controllerPassword),
                   SizedBox(height: 10.0),
                   Text("By clicking Sign Up you agree with our "),

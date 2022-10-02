@@ -6,9 +6,22 @@ import 'package:Recipes_app/src/styles/styles.dart';
 //Widgets
 import 'package:Recipes_app/src/widgets/appBars.dart';
 import 'package:Recipes_app/src/widgets/bottomNavigation.dart';
+import '../userManagement/auth.dart';
+import '../widgets/buttons.dart';
 import '../widgets/drawerMenu.dart';
 
-class UserPage extends StatelessWidget {
+class UserPage extends StatefulWidget {
+  @override
+  State<UserPage> createState() => _UserPageState();
+}
+
+class _UserPageState extends State<UserPage> {
+   Future<void> signOut() async{
+     await Auth().signOut();
+     Navigator.pushNamed(context, '/');
+}
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,8 +33,14 @@ class UserPage extends StatelessWidget {
             SliverList(
                 delegate: SliverChildListDelegate([
                   Column(
-                    children: <Widget>[
-                      Text("User")
+                    children:<Widget>[
+                      Text("User"),
+                      BasicButton(
+                        onPressed: () {
+                          signOut();
+                        },
+                        text: 'Log out',
+                      ),
                     ],
                   )
                 ]))
