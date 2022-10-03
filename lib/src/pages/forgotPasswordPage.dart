@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
+//Firebase
+import 'package:firebase_auth/firebase_auth.dart';
+
 //Styles
 import '../styles/styles.dart';
 
 //Widgets
 import 'package:Recipes_app/src/widgets/buttons.dart';
 import 'package:Recipes_app/src/widgets/textInputs.dart';
+
+import '../userManagement/auth.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   @override
@@ -16,6 +21,20 @@ class _ForgotPasswordPage extends State<ForgotPasswordPage>{
 
   TextEditingController controllerEmail = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+
+  Future<void> sendPasswordResetEmail() async {
+    try {
+      await Auth().sendPasswordResetEmail(
+        email: controllerEmail.text.trim(),
+      );
+      print(controllerEmail.text.trim());
+      showAlert(context);
+    } on FirebaseAuthException catch (e) {
+      setState(() {
+        print("Error");
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +68,7 @@ class _ForgotPasswordPage extends State<ForgotPasswordPage>{
                     SizedBox(height: 35.0),
                     BasicButton(
                       onPressed: () {
-                        showAlert(context);
+                        sendPasswordResetEmail();
                       },
                       text: 'Reset password',
                     ),

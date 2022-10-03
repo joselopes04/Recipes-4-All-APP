@@ -5,20 +5,24 @@ import '../models/userModel.dart';
 
 class Auth {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+
   User? get currentUser => _firebaseAuth.currentUser;
+
   Stream<User?> get authStateChanges => _firebaseAuth.authStateChanges();
 
   //Create user object
-  UserModel? _user(User user){
-    return user != null ? UserModel(uid: user.uid, isAnonymous: user.isAnonymous) : null;
+  UserModel? _user(User user) {
+    return user != null
+        ? UserModel(uid: user.uid, isAnonymous: user.isAnonymous)
+        : null;
   }
 
-  Future signInGuest() async{
+  Future signInGuest() async {
     try {
       UserCredential result = await _firebaseAuth.signInAnonymously();
       User? user = result.user;
       return _user(user!);
-    } catch(e){
+    } catch (e) {
       print(e.toString());
       return null;
     }
@@ -29,9 +33,7 @@ class Auth {
     required String password,
   }) async {
     await _firebaseAuth.signInWithEmailAndPassword(
-        email: email,
-        password: password
-    );
+        email: email, password: password);
   }
 
   Future<void> createUserWithEmailAndPassword({
@@ -39,13 +41,16 @@ class Auth {
     required String password,
   }) async {
     await _firebaseAuth.createUserWithEmailAndPassword(
-        email: email,
-        password: password
-    );
+        email: email, password: password);
   }
 
-  Future<void> signOut() async{
+  Future<void> sendPasswordResetEmail({
+    required String email,
+  }) async {
+    _firebaseAuth.sendPasswordResetEmail(email: email);
+  }
+
+  Future<void> signOut() async {
     await _firebaseAuth.signOut();
   }
-
 }
