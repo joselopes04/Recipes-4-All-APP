@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 //Colors
 final colorBG = Color.fromRGBO(200, 200, 222, 1.0);
 final colorIcons = Color.fromRGBO(255, 104, 0, 1.0);
-final colorLoginBtn = Color.fromRGBO(232, 152, 64, 1.0);
-final colorContainerInput = Color.fromRGBO(142, 142, 147, 1.2);
+final colorBtn = Color.fromRGBO(232, 152, 64, 1.0);
+final colorInputBG = Color.fromRGBO(142, 142, 147, 1.2);
 final colorLink = Color.fromRGBO(6, 69, 173, 1);
+final colorValidGreen = Color.fromRGBO(35, 228, 61, 1.0);
+final colorErrorRed = Color.fromRGBO(255, 51, 51, 1.0);
 
 final colorGrey = Color.fromRGBO(128, 128, 128, 0.8);
 final colorWhite = Color.fromRGBO(255, 255, 255, 1.0);

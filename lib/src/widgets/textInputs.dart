@@ -10,7 +10,7 @@ Widget emailInput(TextEditingController controller) {
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         filled: true,
-        fillColor: colorContainerInput,
+        fillColor: colorInputBG,
         hintText: 'Email',
         border: UnderlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
       ),
@@ -31,7 +31,7 @@ Widget usernameInput(TextEditingController controller) {
       keyboardType: TextInputType.name,
       decoration: InputDecoration(
           filled: true,
-          fillColor: colorContainerInput,
+          fillColor: colorInputBG,
           hintText: 'Username',
           border:
               UnderlineInputBorder(borderRadius: BorderRadius.circular(20.0))),
@@ -52,7 +52,7 @@ Widget passwordInput(TextEditingController controller) {
       obscureText: true,
       decoration: InputDecoration(
           filled: true,
-          fillColor: colorContainerInput,
+          fillColor: colorInputBG,
           hintText: 'Password',
           border:
               UnderlineInputBorder(borderRadius: BorderRadius.circular(20.0))),

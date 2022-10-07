@@ -33,10 +33,20 @@ class _RegistrationPage extends State<RegistrationPage> {
         password: controllerPassword.text.trim(),
       );
       Navigator.pushNamed(context, 'login');
+       SnackBar snackBar = SnackBar(
+        content: Text('Account created successfully'),
+        backgroundColor: colorValidGreen,
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
     } on FirebaseAuthException catch (e) {
-      setState(() {
-        errorMessage = e.message;
-      });
+      if (e.code == 'email-already-in-use') {
+        SnackBar snackBar = SnackBar(
+          content: Text('The account already exists for that email.'),
+          backgroundColor: colorErrorRed,
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      }
     }
   }
 

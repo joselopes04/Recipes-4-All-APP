@@ -12,7 +12,6 @@ import 'package:Recipes_app/src/userManagement/auth.dart';
 //Widgets
 import 'package:Recipes_app/src/widgets/buttons.dart';
 import 'package:Recipes_app/src/widgets/textInputs.dart';
-import 'package:Recipes_app/src/widgets/loadingAnimation.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -24,29 +23,39 @@ class _LoginPageState extends State<LoginPage> {
   String? errorMessage = 'Error:';
   TextEditingController controllerEmail = TextEditingController();
   TextEditingController controllerPassword = TextEditingController();
-  bool loading = false;
 
   Future<void> signInWithEmailAndPassword() async {
     try {
-      setState(() => loading = true);
       await Auth().signInWithEmailAndPassword(
         email: controllerEmail.text.trim(),
         password: controllerPassword.text.trim(),
       );
       Navigator.pushNamed(context, 'home');
-      setState(() => loading = false);
+      SnackBar snackBar = SnackBar(
+        content: Text('Log In was successfully'),
+        backgroundColor: colorValidGreen,
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
     } on FirebaseAuthException catch (e) {
-      setState(() {
-        errorMessage = e.message;
-      });
+      if (e.code == 'user-not-found') {
+        SnackBar snackBar = SnackBar(
+          content: Text('User not found'),
+          backgroundColor: colorErrorRed,
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      } else if (e.code == 'wrong-password') {
+        SnackBar snackBar = SnackBar(
+          content: Text('Email or Password are incorrect.'),
+          backgroundColor: colorErrorRed,
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      }
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return loading
-        ? LoadingAnimation()
-        : Scaffold(
+    return Scaffold(
             body: ListView(
             children: [
               Stack(

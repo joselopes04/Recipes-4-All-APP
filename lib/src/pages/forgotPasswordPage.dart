@@ -17,22 +17,23 @@ class ForgotPasswordPage extends StatefulWidget {
   State<ForgotPasswordPage> createState() => _ForgotPasswordPage();
 }
 
-class _ForgotPasswordPage extends State<ForgotPasswordPage>{
-
+class _ForgotPasswordPage extends State<ForgotPasswordPage> {
   TextEditingController controllerEmail = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
   Future<void> sendPasswordResetEmail() async {
     try {
-      await Auth().sendPasswordResetEmail(
-        email: controllerEmail.text.trim(),
-      );
-      print(controllerEmail.text.trim());
+      await Auth().sendPasswordResetEmail(email: controllerEmail.text.trim());
       showAlert(context);
-    } on FirebaseAuthException catch (e) {
-      setState(() {
-        print("Error");
-      });
+    }  on FirebaseAuthException catch (e) {
+      //BUG: if the email is invalid this don't work idk why
+      if (e.code == 'user-not-found') {
+        SnackBar snackBar = SnackBar(
+          content: Text('User not found'),
+          backgroundColor: colorErrorRed,
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      }
     }
   }
 
