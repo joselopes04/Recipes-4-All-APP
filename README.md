@@ -15,7 +15,7 @@ Recipes 4 All is an app that show to users how to make recipes.
 - [Authors](#authors)
 
 ## Install
-Not availabale yet
+Not availabale yet! ⚠️ <br>
 This app is currently only available for Android devices.<br>
 Requirements minimum Android version 5.0 Lollipop. <br>
 <!-- Click on this <a href="https://drive.google.com/file/d/1_waqtASnBfk2ITtdNhKs4gGp8ZEZwHg9/view?usp=drivesdk">link</a> to download it! -->
