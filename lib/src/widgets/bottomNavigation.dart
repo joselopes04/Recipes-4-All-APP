@@ -30,6 +30,7 @@ Widget bottomNavigation(BuildContext context) {
           children: [
             IconButton(
                 color: colorHome,
+                tooltip: "Home",
                 onPressed: () {
                   if (route != 'home') {
                     Navigator.pushNamed(context, 'home');
@@ -38,6 +39,7 @@ Widget bottomNavigation(BuildContext context) {
                 icon: Icon(Icons.explore)),
             IconButton(
                 color: colorFav,
+                tooltip: "Saved",
                 onPressed: () {
                   if (route != 'favorites') {
                     Navigator.pushNamed(context, 'favorites');
@@ -47,6 +49,7 @@ Widget bottomNavigation(BuildContext context) {
             SizedBox(width: 10.0),
             IconButton(
                 color: colorShop,
+                tooltip: "Shopping List",
                 onPressed: () {
                   if (route != 'shoppingList') {
                     Navigator.pushNamed(context, 'shoppingList');
@@ -55,6 +58,7 @@ Widget bottomNavigation(BuildContext context) {
                 icon: Icon(Icons.shopping_basket)),
             IconButton(
                 color: colorUser,
+                tooltip: "My profile",
                 onPressed: () {
                   if (route != 'user') {
                     Navigator.pushNamed(context, 'user');

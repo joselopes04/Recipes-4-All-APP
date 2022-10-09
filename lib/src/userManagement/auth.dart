@@ -13,7 +13,7 @@ class Auth {
   //Create user object
   UserModel? _user(User user) {
     return user != null
-        ? UserModel(uid: user.uid, isAnonymous: user.isAnonymous)
+        ? UserModel(uid: user.uid, isAnonymous: user.isAnonymous, email: user.email, username: user.displayName, photoUrl:user.photoURL)
         : null;
   }
 
