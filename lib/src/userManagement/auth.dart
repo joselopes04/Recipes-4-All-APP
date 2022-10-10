@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 
 //Models
 import '../models/userModel.dart';
@@ -13,10 +14,27 @@ class Auth {
   //Create user object
   UserModel? _user(User user) {
     return user != null
-        ? UserModel(uid: user.uid, isAnonymous: user.isAnonymous, email: user.email, username: user.displayName, photoUrl:user.photoURL)
+        ? UserModel(
+            uid: user.uid,
+            isAnonymous: user.isAnonymous,
+            email: user.email,
+            username: user.displayName,
+            photoUrl: user.photoURL)
         : null;
   }
 
+  //Check if a user is logged in or not
+  void isLoggedIn(BuildContext context) {
+    FirebaseAuth.instance.authStateChanges().listen((User? user) {
+      if (user == null) {
+        Navigator.pushNamed(context, "welcome");
+      } else {
+        Navigator.pushNamed(context, "home");
+      }
+    });
+  }
+
+  //signInAnonymously
   Future signInGuest() async {
     try {
       UserCredential result = await _firebaseAuth.signInAnonymously();
@@ -28,6 +46,7 @@ class Auth {
     }
   }
 
+  //signInWithEmailAndPassword
   Future<void> signInWithEmailAndPassword({
     required String email,
     required String password,
@@ -36,6 +55,7 @@ class Auth {
         email: email, password: password);
   }
 
+  //Create user
   Future<void> createUserWithEmailAndPassword({
     required String email,
     required String password,

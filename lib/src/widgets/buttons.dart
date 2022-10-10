@@ -35,7 +35,7 @@ class _BasicButtonState extends State<BasicButton> {
               widget.onPressed();
             },
             style: ElevatedButton.styleFrom(
-              primary: colorBtn,
+              primary: colorLogo,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),

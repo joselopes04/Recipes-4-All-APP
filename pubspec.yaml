@@ -31,17 +31,29 @@ dependencies:
     sdk: flutter
   firebase_core: ^1.21.1
   firebase_auth: ^3.3.4
-  cupertino_icons: ^1.0.2
+
   flutter_swiper : ^1.1.6
   url_launcher: ^6.0.9 #Links
   like_button: ^2.0.4
   image_picker: ^0.8.6
   firebase_storage: ^10.3.11
+  flutter_native_splash: ^2.2.11
+
+
+flutter_native_splash:
+  image: "assets/images/logoNoBGMed.png"
+  color: "#e89840"
+  android: true
+  ios: true
+
 
 dev_dependencies:
-  flutter_launcher_icons: "^0.10.0"
+  flutter_launcher_icons: "^0.10.0" #App Icon
   flutter_test:
     sdk: flutter
+
+
+
 
 
 flutter_icons:
