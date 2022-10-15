@@ -9,8 +9,13 @@ import 'package:Recipes_app/src/viewModels/categories.dart';
 //Provider
 import '../provider/recipesProvider.dart';
 
-class
-SwiperCategory extends StatelessWidget {
+class SwiperCategory extends StatefulWidget {
+  @override
+  State<SwiperCategory> createState() => _SwiperCategory();
+
+}
+
+class _SwiperCategory extends State<SwiperCategory> {
   final controller = PageController(
       initialPage: 1,
       viewportFraction: 0.3

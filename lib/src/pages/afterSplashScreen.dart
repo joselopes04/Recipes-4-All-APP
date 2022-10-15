@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 //UserManagement
 import 'package:Recipes_app/src/userManagement/auth.dart';
 
-//Styles
-import '../styles/styles.dart';
-
 class SplashScreen extends StatelessWidget {
   final Auth _auth = Auth();
 

@@ -7,27 +7,27 @@ import 'package:firebase_storage/firebase_storage.dart';
 //Styles
 import 'package:Recipes_app/src/styles/styles.dart';
 
+//UserManagement
+import 'package:Recipes_app/src/userManagement/auth.dart';
+
 //Widgets
 import 'package:Recipes_app/src/widgets/appBars.dart';
 import 'package:Recipes_app/src/widgets/bottomNavigation.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
-import '../userManagement/auth.dart';
 import '../widgets/buttons.dart';
 import '../widgets/drawerMenu.dart';
+import '../widgets/textInputs.dart';
 
 class UserPage extends StatefulWidget {
   @override
   State<UserPage> createState() => _UserPageState();
+
 }
 
 class _UserPageState extends State<UserPage> {
   File? image;
-
-  Future<void> signOut() async {
-    await Auth().signOut();
-    Navigator.pushNamed(context, '/');
-  }
+  final Auth _auth = Auth();
 
   Future pickImage(ImageSource source) async {
     try {
@@ -50,17 +50,28 @@ class _UserPageState extends State<UserPage> {
 
   @override
   Widget build(BuildContext context) {
+    String email = _auth.getEmail();
+    String username = _auth.getUsername();
+    bool enabled = false;
+    TextEditingController controllerUsername = TextEditingController(text: username);
+    TextEditingController controllerEmail = TextEditingController(text: email);
     return Scaffold(
         drawer: const DrawerMenu(),
         backgroundColor: colorBG,
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: colorIcons,
+          onPressed: () {},
+          child: Icon(Icons.more_vert),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: CustomScrollView(
           slivers: <Widget>[
-            appBar(context, 'My profile'),
+            appBarOnlyTitle('My profile'),
             SliverList(
                 delegate: SliverChildListDelegate([
               Column(
                 children: <Widget>[
-                  SizedBox(height: 10),
+                  SizedBox(height: 20),
                   SizedBox(
                       height: 115,
                       width: 115,
@@ -76,53 +87,62 @@ class _UserPageState extends State<UserPage> {
                               : Icon(Icons.person,
                                   size: 115, color: colorWhite),
                           Positioned(
-                            right: 0,
-                            bottom: 0,
-                            child:Container(
-                              height: 40.0,
-                              width: 40.0,
-                              decoration: BoxDecoration(color: colorWhite, borderRadius: BorderRadius.circular(50.0)),
-                              child: Center(
-                                child:  IconButton(
-                                  onPressed: () async{
-                                    showModalBottomSheet(
-                                        context: context,
-                                        builder: (context) => Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            ListTile(
-                                              leading: Icon(Icons.camera_alt_outlined),
-                                              title: Text("Camera"),
-                                              onTap: (){
-                                                Navigator.pop(context);
-                                                pickImage(ImageSource.camera);
-                                              },
-                                            ),
-                                            ListTile(
-                                              leading: Icon(Icons.photo),
-                                              title: Text("Gallery"),
-                                              onTap: (){
-                                                Navigator.pop(context);
-                                                pickImage(ImageSource.gallery);
-
-                                              },
-                                            )
-                                          ],
-                                        )
-                                    );
-                                    // pickImage();
-                                  },
-                                  iconSize: 30.0,
-                                  icon: Icon(Icons.camera_alt_outlined), ),
-                              )
-                            )
-                          )
+                              right: 0,
+                              bottom: 0,
+                              child: Container(
+                                  height: 40.0,
+                                  width: 40.0,
+                                  decoration: BoxDecoration(
+                                      color: colorWhite,
+                                      borderRadius:
+                                          BorderRadius.circular(50.0)),
+                                  child: Center(
+                                    child: IconButton(
+                                      onPressed: () async {
+                                        showModalBottomSheet(
+                                            context: context,
+                                            builder: (context) => Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  children: [
+                                                    ListTile(
+                                                      leading: Icon(Icons
+                                                          .camera_alt_outlined),
+                                                      title: Text("Camera"),
+                                                      onTap: () {
+                                                        Navigator.pop(context);
+                                                        pickImage(
+                                                            ImageSource.camera);
+                                                      },
+                                                    ),
+                                                    ListTile(
+                                                      leading:
+                                                          Icon(Icons.photo),
+                                                      title: Text("Gallery"),
+                                                      onTap: () {
+                                                        Navigator.pop(context);
+                                                        pickImage(ImageSource
+                                                            .gallery);
+                                                      },
+                                                    )
+                                                  ],
+                                                ));
+                                        // pickImage();
+                                      },
+                                      iconSize: 30.0,
+                                      icon: Icon(Icons.camera_alt_outlined),
+                                    ),
+                                  )))
                         ],
                       )),
-                  SizedBox(height: 100),
+                  SizedBox(height: 50),
+                  usernameInput(controllerUsername, colorBG, enabled),
+                  SizedBox(height: 20),
+                  emailInput(controllerEmail, colorBG, enabled),
+                  SizedBox(height: 50),
                   BasicButton(
                     onPressed: () {
-                      signOut();
+                      Auth().signOut(context);
                     },
                     text: 'Log out',
                   ),

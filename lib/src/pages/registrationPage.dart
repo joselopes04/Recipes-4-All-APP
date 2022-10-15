@@ -30,6 +30,7 @@ class _RegistrationPage extends State<RegistrationPage> {
     try {
       await Auth().createUserWithEmailAndPassword(
         email: controllerEmail.text.trim(),
+        username: controllerUsername.text.trim(),
         password: controllerPassword.text.trim(),
       );
       Navigator.pushNamed(context, 'login');
@@ -72,11 +73,11 @@ class _RegistrationPage extends State<RegistrationPage> {
                   child: Column(children: [
                     Text('Create an account', style: bigTitleStyle),
                     SizedBox(height: 30.0),
-                    usernameInput(controllerUsername),
+                    usernameInput(controllerUsername, colorInputBG, true),
                     SizedBox(height: 25.0),
-                    emailInput(controllerEmail),
+                    emailInput(controllerEmail, colorInputBG, true),
                     SizedBox(height: 25.0),
-                    passwordInput(controllerPassword),
+                    passwordInput(controllerPassword, colorInputBG, true),
                     SizedBox(height: 10.0),
                     Text("By clicking Sign Up you agree with our "),
                     GestureDetector(

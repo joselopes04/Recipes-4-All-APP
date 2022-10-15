@@ -16,7 +16,7 @@ class ShoppingListPage extends StatelessWidget {
         backgroundColor: colorBG,
         body: CustomScrollView(
           slivers: <Widget>[
-            appBar(context, 'Shopping List'),
+            appBarOnlyTitle('Shopping List'),
             SliverList(
                 delegate: SliverChildListDelegate([
                   Column(

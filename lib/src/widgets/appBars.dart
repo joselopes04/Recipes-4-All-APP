@@ -34,6 +34,21 @@ Widget appBar(BuildContext context, String title){
   );
 }
 
+Widget appBarOnlyTitle(String title){
+  return SliverAppBar(
+    backgroundColor: colorBG,
+    floating: false,
+    pinned: true,
+    elevation: 0.0,
+    title: Text(title, style: titlesStyle),
+    actions: <Widget>[
+      Container(
+          padding:const EdgeInsets.all(15.0),
+      )
+    ],
+  );
+}
+
 Widget appBarRecipe(String image){
   return SliverAppBar(
     backgroundColor: colorBG,

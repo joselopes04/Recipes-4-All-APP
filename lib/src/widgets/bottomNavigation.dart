@@ -8,14 +8,14 @@ Widget bottomNavigation(BuildContext context) {
   Color? colorHome, colorFav, colorShop, colorUser = colorIcons;
 
   //Change color of current route icon
-  if (route == 'home') {
-    colorHome = colorWhite;
+  if (route == 'user') {
+    colorUser = colorWhite;
   } else if (route == 'favorites') {
     colorFav = colorWhite;
   } else if (route == 'shoppingList') {
     colorShop = colorWhite;
   } else {
-    colorUser = colorWhite;
+    colorHome = colorWhite;
   }
 
   return BottomAppBar(

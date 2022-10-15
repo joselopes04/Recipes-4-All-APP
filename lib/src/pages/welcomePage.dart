@@ -11,7 +11,6 @@ import '../styles/styles.dart';
 import 'package:Recipes_app/src/widgets/buttons.dart';
 
 class WelcomePage extends StatelessWidget {
-
   final Auth _auth = Auth();
 
   @override
@@ -75,10 +74,10 @@ class WelcomePage extends StatelessWidget {
                   )),
             ),
             GestureDetector(
-              onTap: () async{
+              onTap: () async {
                 dynamic result = await _auth.signInGuest();
                 Navigator.pushNamed(context, 'home');
-                 print(result.uid +" "+ result.isAnonymous);
+                print(result.uid + " " + result.isAnonymous);
               },
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),

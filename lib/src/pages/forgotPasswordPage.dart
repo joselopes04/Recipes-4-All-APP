@@ -15,12 +15,12 @@ import '../userManagement/auth.dart';
 class ForgotPasswordPage extends StatefulWidget {
   @override
   State<ForgotPasswordPage> createState() => _ForgotPasswordPage();
+
 }
 
 class _ForgotPasswordPage extends State<ForgotPasswordPage> {
   TextEditingController controllerEmail = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-
   Future<void> sendPasswordResetEmail() async {
     try {
       await Auth().sendPasswordResetEmail(email: controllerEmail.text.trim());
@@ -65,7 +65,7 @@ class _ForgotPasswordPage extends State<ForgotPasswordPage> {
                           style: smallTextStyle,
                           textAlign: TextAlign.center),
                     ),
-                    emailInput(controllerEmail),
+                    emailInput(controllerEmail, colorInputBG, true),
                     SizedBox(height: 35.0),
                     BasicButton(
                       onPressed: () {

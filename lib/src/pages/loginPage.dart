@@ -82,9 +82,9 @@ class _LoginPageState extends State<LoginPage> {
                           Text('Login to your account',
                               style: titleMinimizedRecipeStyle),
                           SizedBox(height: 20.0),
-                          emailInput(controllerEmail),
+                          emailInput(controllerEmail, colorInputBG,true),
                           SizedBox(height: 25.0),
-                          passwordInput(controllerPassword),
+                          passwordInput(controllerPassword, colorInputBG, true),
                           Container(
                               margin: EdgeInsets.only(top: 10.0),
                               child: GestureDetector(
