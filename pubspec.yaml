@@ -39,6 +39,7 @@ dependencies:
   firebase_storage: ^11.0.3
   flutter_native_splash: ^2.2.11
   fluttertoast: ^8.1.1
+  permission_handler: ^10.2.0
 
 flutter_native_splash:
   image: "assets/images/logoNoBGMed.png"

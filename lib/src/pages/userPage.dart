@@ -19,6 +19,10 @@ import '../widgets/buttons.dart';
 import '../widgets/drawerMenu.dart';
 import '../widgets/textInputs.dart';
 
+//External Packages
+import 'package:permission_handler/permission_handler.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+
 class UserPage extends StatefulWidget {
   @override
   State<UserPage> createState() => _UserPageState();
@@ -64,11 +68,13 @@ class _UserPageState extends State<UserPage> {
     String email = _auth.getEmail();
     String username = _auth.getUsername();
 
-    TextEditingController controllerUsername = TextEditingController(text: username);
+    TextEditingController controllerUsername =
+        TextEditingController(text: username);
     TextEditingController controllerEmail = TextEditingController(text: email);
 
     return Scaffold(
-        resizeToAvoidBottomInset: false, //Action button doesn't move up
+        resizeToAvoidBottomInset: false,
+        //Action button doesn't move up
         drawer: const DrawerMenu(),
         backgroundColor: colorBG,
         floatingActionButton: FloatingActionButton(
@@ -147,23 +153,51 @@ class _UserPageState extends State<UserPage> {
                                                       MainAxisSize.min,
                                                   children: [
                                                     ListTile(
-                                                      leading: Icon(Icons
-                                                          .camera_alt_outlined),
+                                                      leading: Icon(Icons.camera_alt_outlined),
                                                       title: Text("Camera"),
-                                                      onTap: () {
-                                                        Navigator.pop(context);
-                                                        pickImage(
-                                                            ImageSource.camera);
+                                                      onTap: () async {
+                                                        PermissionStatus cameraStatus = await Permission.camera.request();
+                                                        if (cameraStatus == PermissionStatus.granted) {
+                                                          Navigator.pop(context);
+                                                          pickImage(ImageSource.camera);
+                                                        }
+                                                        if(cameraStatus == PermissionStatus.denied){
+                                                          Fluttertoast.showToast(
+                                                              msg: "We need this permission to access your camera",
+                                                              toastLength: Toast.LENGTH_SHORT,
+                                                              backgroundColor: colorWarningYellow,
+                                                              gravity: ToastGravity.CENTER,
+                                                              timeInSecForIosWeb: 1
+                                                          );
+                                                        }
+                                                        if(cameraStatus == PermissionStatus.permanentlyDenied){
+                                                          openAppSettings();
+                                                        }
                                                       },
                                                     ),
                                                     ListTile(
                                                       leading:
                                                           Icon(Icons.photo),
                                                       title: Text("Gallery"),
-                                                      onTap: () {
-                                                        Navigator.pop(context);
-                                                        pickImage(ImageSource
-                                                            .gallery);
+                                                      onTap: () async{
+                                                        PermissionStatus galleryStatus = await Permission.storage.request();
+                                                        if(galleryStatus == PermissionStatus.granted){
+                                                          Navigator.pop(context);
+                                                          pickImage(ImageSource.gallery);
+                                                        }
+                                                        if(galleryStatus == PermissionStatus.denied){
+                                                          Fluttertoast.showToast(
+                                                              msg: "We need this permission to access your gallery",
+                                                              toastLength: Toast.LENGTH_LONG,
+                                                              backgroundColor: colorWarningYellow,
+                                                              gravity: ToastGravity.CENTER,
+                                                              timeInSecForIosWeb: 2
+                                                          );
+                                                        }
+                                                        if(galleryStatus == PermissionStatus.permanentlyDenied){
+                                                          openAppSettings();
+                                                        }
+
                                                       },
                                                     )
                                                   ],
@@ -184,10 +218,10 @@ class _UserPageState extends State<UserPage> {
                   Visibility(
                     visible: enabled,
                     child: BasicButton(
-                      onPressed: () async{
+                      onPressed: () async {
                         username = controllerUsername.text.toString();
                         email = controllerEmail.text.toString();
-                        await _auth.updateUserInfo(context,username, email);
+                        await _auth.updateUserInfo(context, username, email);
                         chageBool();
                       },
                       text: 'Save changes',
