@@ -12,6 +12,7 @@ import 'package:Recipes_app/src/pages/favoritesPage.dart';
 import 'package:Recipes_app/src/pages/shoppingListPage.dart';
 import 'package:Recipes_app/src/pages/userPage.dart';
 import 'package:Recipes_app/src/pages/afterSplashScreen.dart';
+import 'package:Recipes_app/src/pages/addRecipe.dart';
 
 //Firebase
 import 'package:firebase_core/firebase_core.dart';
@@ -33,7 +34,6 @@ class MyApp extends StatelessWidget {
 
       debugShowCheckedModeBanner: false,
 
-
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => SplashScreen(),
         'welcome': (BuildContext context) => WelcomePage(),
@@ -52,6 +52,7 @@ class MyApp extends StatelessWidget {
         //Recipes
         'category': (BuildContext context) => CategoryPage(),
         'recipe': (BuildContext context) => RecipePage(),
+        'createRecipe': (BuildContext context) => CreateRecipe(),
       },
     );
   }

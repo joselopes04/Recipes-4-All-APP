@@ -56,7 +56,6 @@ class WelcomePage extends StatelessWidget {
               height: 45.0,
               child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'home');
                   },
                   style: ElevatedButton.styleFrom(
                     primary: colorWhite,

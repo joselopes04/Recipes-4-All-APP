@@ -17,6 +17,7 @@ Widget appBar(BuildContext context, String title){
       Container(
         padding:const EdgeInsets.all(15.0),
         child: IconButton(
+          tooltip: "Search recipes",
             onPressed: (){
               showSearch(
                   context: context,

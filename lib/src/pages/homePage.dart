@@ -24,8 +24,11 @@ class HomePage extends StatelessWidget {
         drawer: const DrawerMenu(),
         backgroundColor: colorBG,
         floatingActionButton: FloatingActionButton(
+          tooltip: "Add recipe",
           backgroundColor: colorIcons,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, "createRecipe");
+          },
           child: Icon(Icons.add),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

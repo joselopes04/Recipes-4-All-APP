@@ -29,15 +29,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  firebase_core: ^1.21.1
-  firebase_auth: ^3.3.4
+  firebase_core: ^2.1.1
+  firebase_auth: ^4.1.0
 
   flutter_swiper : ^1.1.6
   url_launcher: ^6.0.9 #Links
   like_button: ^2.0.4
   image_picker: ^0.8.6
-  firebase_storage: ^10.3.11
+  firebase_storage: ^11.0.3
   flutter_native_splash: ^2.2.11
+  fluttertoast: ^8.1.1
 
 flutter_native_splash:
   image: "assets/images/logoNoBGMed.png"

@@ -22,13 +22,13 @@ import '../widgets/textInputs.dart';
 class UserPage extends StatefulWidget {
   @override
   State<UserPage> createState() => _UserPageState();
-
 }
 
 class _UserPageState extends State<UserPage> {
   File? image;
-  final Auth _auth = Auth();
+  bool enabled = false;
 
+  //Pick profile picture
   Future pickImage(ImageSource source) async {
     try {
       final image = await ImagePicker().pickImage(source: source);
@@ -48,19 +48,59 @@ class _UserPageState extends State<UserPage> {
     }
   }
 
+  bool? chageBool() {
+    setState(() {
+      if (enabled == false) {
+        enabled = true;
+      } else {
+        enabled = false;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    final Auth _auth = Auth();
     String email = _auth.getEmail();
     String username = _auth.getUsername();
-    bool enabled = false;
+
     TextEditingController controllerUsername = TextEditingController(text: username);
     TextEditingController controllerEmail = TextEditingController(text: email);
+
     return Scaffold(
+        resizeToAvoidBottomInset: false, //Action button doesn't move up
         drawer: const DrawerMenu(),
         backgroundColor: colorBG,
         floatingActionButton: FloatingActionButton(
+          tooltip: "More options",
           backgroundColor: colorIcons,
-          onPressed: () {},
+          onPressed: () {
+            showModalBottomSheet(
+                context: context,
+                builder: (context) => Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        ListTile(
+                          leading: Icon(Icons.edit),
+                          title: Text("Edit account"),
+                          onTap: () {
+                            chageBool();
+                            Navigator.pop(context);
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.lock),
+                          title: Text("Reset Password"),
+                          onTap: () {},
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.delete),
+                          title: Text("Delete account"),
+                          onTap: () {},
+                        )
+                      ],
+                    ));
+          },
           child: Icon(Icons.more_vert),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -98,6 +138,7 @@ class _UserPageState extends State<UserPage> {
                                           BorderRadius.circular(50.0)),
                                   child: Center(
                                     child: IconButton(
+                                      tooltip: "Change profile picture",
                                       onPressed: () async {
                                         showModalBottomSheet(
                                             context: context,
@@ -139,6 +180,19 @@ class _UserPageState extends State<UserPage> {
                   usernameInput(controllerUsername, colorBG, enabled),
                   SizedBox(height: 20),
                   emailInput(controllerEmail, colorBG, enabled),
+                  SizedBox(height: 50),
+                  Visibility(
+                    visible: enabled,
+                    child: BasicButton(
+                      onPressed: () async{
+                        username = controllerUsername.text.toString();
+                        email = controllerEmail.text.toString();
+                        await _auth.updateUserInfo(context,username, email);
+                        chageBool();
+                      },
+                      text: 'Save changes',
+                    ),
+                  ),
                   SizedBox(height: 50),
                   BasicButton(
                     onPressed: () {

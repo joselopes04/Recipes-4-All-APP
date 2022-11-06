@@ -1,3 +1,4 @@
+import 'package:Recipes_app/src/styles/styles.dart';
 import 'package:flutter/material.dart';
 
 //UserManagement
@@ -10,9 +11,11 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     _auth.isLoggedIn(context);
     return Scaffold(
+      backgroundColor: colorLogo,
         body: Container(
       child: Center(
         child: Column(
+
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
           ],

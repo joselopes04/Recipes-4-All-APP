@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 //Firebase
 import 'package:firebase_auth/firebase_auth.dart';
 
+//External Packages
+import 'package:fluttertoast/fluttertoast.dart';
+
 //Styles
 import '../styles/styles.dart';
 
@@ -31,11 +34,13 @@ class _LoginPageState extends State<LoginPage> {
         password: controllerPassword.text.trim(),
       );
       Navigator.pushNamed(context, 'home');
-      SnackBar snackBar = SnackBar(
-        content: Text('Log In was successfully'),
-        backgroundColor: colorValidGreen,
+      Fluttertoast.showToast(
+          msg: "Login was successfully",
+          toastLength: Toast.LENGTH_SHORT,
+          backgroundColor: colorValidGreen,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1
       );
-      ScaffoldMessenger.of(context).showSnackBar(snackBar);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         SnackBar snackBar = SnackBar(
