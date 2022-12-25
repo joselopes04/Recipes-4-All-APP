@@ -49,6 +49,7 @@ class WelcomePage extends StatelessWidget {
                 Navigator.pushNamed(context, 'login');
               },
               text: 'Log In with email',
+              isActive: true,
             ),
             SizedBox(height: 15.0),
             Container(

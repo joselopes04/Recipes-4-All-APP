@@ -15,10 +15,11 @@ Widget backButton(BuildContext context, Color color) {
 }
 
 class BasicButton extends StatefulWidget {
-  final GestureTapCallback onPressed;
+  final GestureTapCallback? onPressed;
   final String text;
+  final bool isActive;
 
-  BasicButton({required this.onPressed, required this.text});
+  BasicButton({this.onPressed, required this.text, required this.isActive});
 
   @override
   _BasicButtonState createState() => _BasicButtonState();
@@ -31,9 +32,9 @@ class _BasicButtonState extends State<BasicButton> {
         width: 300.0,
         height: 45.0,
         child: ElevatedButton(
-            onPressed: () {
-              widget.onPressed();
-            },
+            onPressed:  widget.isActive ?() {
+              widget.onPressed!();
+            }:null,
             style: ElevatedButton.styleFrom(
               primary: colorLogo,
               shape: RoundedRectangleBorder(

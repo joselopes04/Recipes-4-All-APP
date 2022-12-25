@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
         //Recipes
         'category': (BuildContext context) => CategoryPage(),
         'recipe': (BuildContext context) => RecipePage(),
-        'createRecipe': (BuildContext context) => CreateRecipe(),
+        'createRecipe': (BuildContext context) => AddRecipe(),
       },
     );
   }

@@ -31,6 +31,8 @@ class UserPage extends StatefulWidget {
 class _UserPageState extends State<UserPage> {
   File? image;
   bool enabled = false;
+  final _formKey = GlobalKey<FormState>();
+  bool isActive = true;
 
   //Pick profile picture
   Future pickImage(ImageSource source) async {
@@ -52,7 +54,7 @@ class _UserPageState extends State<UserPage> {
     }
   }
 
-  bool? chageBool() {
+  bool? changeBool() {
     setState(() {
       if (enabled == false) {
         enabled = true;
@@ -65,13 +67,10 @@ class _UserPageState extends State<UserPage> {
   @override
   Widget build(BuildContext context) {
     final Auth _auth = Auth();
-    String email = _auth.getEmail();
     String username = _auth.getUsername();
-
-    TextEditingController controllerUsername =
-        TextEditingController(text: username);
+    String email = _auth.getEmail();
+    TextEditingController controllerUsername = TextEditingController(text: username);
     TextEditingController controllerEmail = TextEditingController(text: email);
-
     return Scaffold(
         resizeToAvoidBottomInset: false,
         //Action button doesn't move up
@@ -90,7 +89,7 @@ class _UserPageState extends State<UserPage> {
                           leading: Icon(Icons.edit),
                           title: Text("Edit account"),
                           onTap: () {
-                            chageBool();
+                            changeBool();
                             Navigator.pop(context);
                           },
                         ),
@@ -115,7 +114,9 @@ class _UserPageState extends State<UserPage> {
             appBarOnlyTitle('My profile'),
             SliverList(
                 delegate: SliverChildListDelegate([
-              Column(
+              Form(
+                key: _formKey,
+                  child: Column(
                 children: <Widget>[
                   SizedBox(height: 20),
                   SizedBox(
@@ -153,7 +154,8 @@ class _UserPageState extends State<UserPage> {
                                                       MainAxisSize.min,
                                                   children: [
                                                     ListTile(
-                                                      leading: Icon(Icons.camera_alt_outlined),
+                                                      leading: Icon(
+                                                          Icons.camera_alt),
                                                       title: Text("Camera"),
                                                       onTap: () async {
                                                         PermissionStatus cameraStatus = await Permission.camera.request();
@@ -161,16 +163,10 @@ class _UserPageState extends State<UserPage> {
                                                           Navigator.pop(context);
                                                           pickImage(ImageSource.camera);
                                                         }
-                                                        if(cameraStatus == PermissionStatus.denied){
-                                                          Fluttertoast.showToast(
-                                                              msg: "We need this permission to access your camera",
-                                                              toastLength: Toast.LENGTH_SHORT,
-                                                              backgroundColor: colorWarningYellow,
-                                                              gravity: ToastGravity.CENTER,
-                                                              timeInSecForIosWeb: 1
-                                                          );
+                                                        if (cameraStatus == PermissionStatus.denied) {
+                                                          Fluttertoast.showToast(msg: "We need this permission to access your camera", toastLength: Toast.LENGTH_SHORT, backgroundColor: colorWarningYellow, gravity: ToastGravity.CENTER, timeInSecForIosWeb: 1);
                                                         }
-                                                        if(cameraStatus == PermissionStatus.permanentlyDenied){
+                                                        if (cameraStatus == PermissionStatus.permanentlyDenied) {
                                                           openAppSettings();
                                                         }
                                                       },
@@ -179,25 +175,15 @@ class _UserPageState extends State<UserPage> {
                                                       leading:
                                                           Icon(Icons.photo),
                                                       title: Text("Gallery"),
-                                                      onTap: () async{
+                                                      onTap: () async {
                                                         PermissionStatus galleryStatus = await Permission.storage.request();
-                                                        if(galleryStatus == PermissionStatus.granted){
-                                                          Navigator.pop(context);
-                                                          pickImage(ImageSource.gallery);
+                                                        if (galleryStatus == PermissionStatus.granted) {
+                                                          Navigator.pop(context);pickImage(ImageSource.gallery);
                                                         }
-                                                        if(galleryStatus == PermissionStatus.denied){
-                                                          Fluttertoast.showToast(
-                                                              msg: "We need this permission to access your gallery",
-                                                              toastLength: Toast.LENGTH_LONG,
-                                                              backgroundColor: colorWarningYellow,
-                                                              gravity: ToastGravity.CENTER,
-                                                              timeInSecForIosWeb: 2
-                                                          );
+                                                        if (galleryStatus == PermissionStatus.denied) {
+                                                          Fluttertoast.showToast(msg: "We need this permission to access your gallery", toastLength: Toast.LENGTH_LONG, backgroundColor: colorWarningYellow, gravity: ToastGravity.CENTER, timeInSecForIosWeb: 2);
                                                         }
-                                                        if(galleryStatus == PermissionStatus.permanentlyDenied){
-                                                          openAppSettings();
-                                                        }
-
+                                                        if (galleryStatus == PermissionStatus.permanentlyDenied) {openAppSettings();}
                                                       },
                                                     )
                                                   ],
@@ -205,7 +191,7 @@ class _UserPageState extends State<UserPage> {
                                         // pickImage();
                                       },
                                       iconSize: 30.0,
-                                      icon: Icon(Icons.camera_alt_outlined),
+                                      icon: Icon(Icons.camera_alt),
                                     ),
                                   )))
                         ],
@@ -219,12 +205,23 @@ class _UserPageState extends State<UserPage> {
                     visible: enabled,
                     child: BasicButton(
                       onPressed: () async {
-                        username = controllerUsername.text.toString();
-                        email = controllerEmail.text.toString();
-                        await _auth.updateUserInfo(context, username, email);
-                        chageBool();
+                        if (_formKey.currentState!.validate()) {
+                          username = controllerUsername.text.toString();
+                          email = controllerEmail.text.toString();
+                          await Auth().updateUserInfo(context, username, email);
+                          changeBool();
+                        }else{
+                          Fluttertoast.showToast(
+                              msg: "Please enter correct information",
+                              toastLength: Toast.LENGTH_SHORT,
+                              backgroundColor: colorErrorRed,
+                              gravity: ToastGravity.CENTER,
+                              timeInSecForIosWeb: 1
+                          );
+                        }
                       },
                       text: 'Save changes',
+                      isActive: isActive,
                     ),
                   ),
                   SizedBox(height: 50),
@@ -233,9 +230,10 @@ class _UserPageState extends State<UserPage> {
                       Auth().signOut(context);
                     },
                     text: 'Log out',
+                    isActive: true,
                   ),
                 ],
-              )
+              ))
             ]))
           ],
         ),

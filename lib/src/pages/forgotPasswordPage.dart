@@ -71,9 +71,14 @@ class _ForgotPasswordPage extends State<ForgotPasswordPage> {
                     SizedBox(height: 35.0),
                     BasicButton(
                       onPressed: () {
-                        sendPasswordResetEmail();
+                        if (_formKey.currentState!.validate()) {
+                          sendPasswordResetEmail();
+                        } else {
+
+                        }
+
                       },
-                      text: 'Reset password',
+                      text: 'Reset password', isActive: true,
                     ),
                   ],
                 ),

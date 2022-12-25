@@ -66,7 +66,7 @@ Widget _minimizedRecipe(
                   Expanded(
                     flex: 1,
                     child: Row(children: <Widget>[
-                      Icon(Icons.access_time, color: colorIcons),
+                      Icon(Icons.access_time_filled, color: colorIcons),
                       Container(
                         child: Text(
                           recipe['Time'],
@@ -78,7 +78,7 @@ Widget _minimizedRecipe(
                   Expanded(
                     flex: 1,
                     child: Row(children: <Widget>[
-                      Icon(Icons.food_bank_outlined, color: colorIcons),
+                      Icon(Icons.food_bank, color: colorIcons),
                       Container(
                         child: Text(
                           recipe['Difficulty'],
@@ -90,7 +90,7 @@ Widget _minimizedRecipe(
                   Expanded(
                     flex: 1,
                     child: Row(children: <Widget>[
-                      Icon(Icons.person_sharp, color: colorIcons),
+                      Icon(Icons.person, color: colorIcons),
                       Container(
                         child: Text(
                           recipe['Servings'],

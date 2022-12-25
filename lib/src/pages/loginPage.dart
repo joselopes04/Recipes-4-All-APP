@@ -39,8 +39,7 @@ class _LoginPageState extends State<LoginPage> {
           toastLength: Toast.LENGTH_SHORT,
           backgroundColor: colorValidGreen,
           gravity: ToastGravity.CENTER,
-          timeInSecForIosWeb: 1
-      );
+          timeInSecForIosWeb: 1);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         SnackBar snackBar = SnackBar(
@@ -61,65 +60,68 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            body: ListView(
-            children: [
-              Stack(
-                children: [
-                  Image(
-                      width: double.infinity,
-                      image: NetworkImage(
-                          'https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19744.jpg?w=996&t=st=1661963154~exp=1661963754~hmac=c0fe8579415171d3cdb8d2348af00edbf688b8530da29d374cecb0303073765c')),
-                  Container(
-                    margin: EdgeInsets.only(top: 40.0),
-                    child: backButton(context, Colors.white),
-                  )
-                ],
-              ),
-              Container(
-                  margin: EdgeInsets.all(20.0),
-                  child: Center(
-                    child: Form(
-                      key: _formKey,
-                      child: Column(
-                        children: [
-                          Text('Welcome back', style: bigTitleStyle),
-                          SizedBox(height: 10.0),
-                          Text('Login to your account',
-                              style: titleMinimizedRecipeStyle),
-                          SizedBox(height: 20.0),
-                          emailInput(controllerEmail, colorInputBG,true),
-                          SizedBox(height: 25.0),
-                          passwordInput(controllerPassword, colorInputBG, true),
-                          Container(
-                              margin: EdgeInsets.only(top: 10.0),
-                              child: GestureDetector(
-                                  child: Text('Forgot your password ?',
-                                      style: linksTextStyle),
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, 'forgotPassword');
-                                  })),
-                          SizedBox(height: 20.0),
-                          BasicButton(
-                            onPressed: () {
-                              signInWithEmailAndPassword();
-                            },
-                            text: 'Sign Up',
-                          ),
-                          Container(
-                              margin: EdgeInsets.only(top: 15.0),
-                              child: GestureDetector(
-                                  child: Text("Don't have an account ? Sign up",
-                                      style: linksTextStyle),
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, 'registration');
-                                  })),
-                        ],
-                      ),
+        body: ListView(
+      children: [
+        Stack(
+          children: [
+            Image(
+                width: double.infinity,
+                image: NetworkImage(
+                    'https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19744.jpg?w=996&t=st=1661963154~exp=1661963754~hmac=c0fe8579415171d3cdb8d2348af00edbf688b8530da29d374cecb0303073765c')),
+            Container(
+              margin: EdgeInsets.only(top: 40.0),
+              child: backButton(context, Colors.white),
+            )
+          ],
+        ),
+        Container(
+            margin: EdgeInsets.all(20.0),
+            child: Center(
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  children: [
+                    Text('Welcome back', style: bigTitleStyle),
+                    SizedBox(height: 10.0),
+                    Text('Login to your account',
+                        style: titleMinimizedRecipeStyle),
+                    SizedBox(height: 20.0),
+                    emailInput(controllerEmail, colorInputBG, true),
+                    SizedBox(height: 25.0),
+                    passwordInput(controllerPassword, colorInputBG, true),
+                    Container(
+                        margin: EdgeInsets.only(top: 10.0),
+                        child: GestureDetector(
+                            child: Text('Forgot your password ?',
+                                style: linksTextStyle),
+                            onTap: () {
+                              Navigator.pushNamed(context, 'forgotPassword');
+                            })),
+                    SizedBox(height: 20.0),
+                    BasicButton(
+                      onPressed: () {
+                        if (_formKey.currentState!.validate()) {
+                          signInWithEmailAndPassword();
+                        }else{
+
+                        }
+                      },
+                      text: 'Sign Up',
+                      isActive: true,
                     ),
-                  ))
-            ],
-          ));
+                    Container(
+                        margin: EdgeInsets.only(top: 15.0),
+                        child: GestureDetector(
+                            child: Text("Don't have an account ? Sign up",
+                                style: linksTextStyle),
+                            onTap: () {
+                              Navigator.pushNamed(context, 'registration');
+                            })),
+                  ],
+                ),
+              ),
+            ))
+      ],
+    ));
   }
 }
