@@ -7,6 +7,7 @@
 Recipes 4 All is an app that show to users how to make recipes.  
 
 ## Table of content
+- [Licence](#license)
 - [Install](#install)
 - [Functionalities](#functionalities)
 - [Screenshots](#screenshots)
@@ -14,43 +15,57 @@ Recipes 4 All is an app that show to users how to make recipes.
 - [Final Notes](#final-notes)
 - [Authors](#authors)
 
+## License
+Coming soon
+
 ## Install
 Not availabale yet! ⚠️ <br>
 This app is currently only available for Android devices.<br>
 Requirements minimum Android version 5.0 Lollipop. <br>
 <!-- Click on this <a href="https://drive.google.com/file/d/1_waqtASnBfk2ITtdNhKs4gGp8ZEZwHg9/view?usp=drivesdk">link</a> to download it! -->
 
-## Screenshots
-
 ## Functionalities
 -Welcome page
 - Account
   - Register.
-  - Login with google.
+  - Login with google. (under development)
   - Login with email and password.
   - Navigate as guest
   - Reset password.
-<!-- - Splash Screen -->
+  - Splash Screen. 
 - Home Screen
-  - Bottom navigation bar
+  - Bottom navigation bar.
   - Drawer menu to navigate.
-  - Greetings message according with the time of the day.
-  - Categories Swipper
-  - Search recipes
-- Category Page
-  - Show a preview recipes in this category
-- Recipe Page
-  - Show the detailed recipe
-  - Show the servings and the servings  
+  - Main Swipper. (under development).
+  - Categories Swipper.
+  - Search recipes.
+  - Popular recipes. (under development).
+
+- Shopping List (under development)
+- Favorites (under development)
 - My profile
-  - Manage your data.
+  - Add a profile picture. (under development).
+  - Update your username and email. 
 <!--   - Reset password.
   - Delete account. -->
   - Log Out
+- Category Page
+  - Show a preview recipes in this category.
+- Recipe Page
+  - Show the detailed recipe.
+  - Show the servings and the servings.
+  - Like and save recipes. (under development).
+- Add Recipe
+  - Save recipe info. (under development)
+  - Upload it. (under development)
 <!-- - Settings
   - Read terms and conditions.
   - Theme is setted by the Android.
   - Change language (Portuguese, English). -->
+
+## Screenshots
+Welcome Screen 
+<p align="center"><img width=30% src="assets/Screenshots/welcomeScreen.jpeg"></p>
 
 ## Built with
 <a href="https://developer.android.com/studio">Android Studio</a> - IDE (Integrated Development Environment) <br>
